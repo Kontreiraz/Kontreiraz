@@ -1,0 +1,94 @@
+#Título: Gamer Analiser 
+#Data: 06/10/2023 ás 22:58h
+#Autor: Kontreiraz 
+#Descrição: Algoritmo para analisar o desempenho de um gamer dado um determinado número de partidas. 
+
+"Gamer Analiser Algorithm"
+
+"Performance"
+
+"Game: " 
+"DKC"
+
+
+#Create a data frame 
+Data_Frame <- data.frame (
+    Id = c(1,2,3,4,5),
+    Wins = c(1, 0, 1, 1, 0),
+    Losses = c(0,1,0,0,1),
+    Duration = c(4, 2, 3, 5, 1.5),          #Horas Games
+    Percentual = c(66, 75, 84, 55, 103)        #Percentual do Game
+)
+
+Data_Frame
+
+"Pontuacao"
+Wins <- c(100, 0, 150, 275, 0)
+Wins 
+
+Losses <- c(0, 100, 0, 0, 125)
+Losses 
+
+Duration <- c(4,2,3,5,1.5)
+"Horas Game"
+Duration 
+
+Percentual <- c(66, 75, 84, 55, 103)
+"Percentual Final do Game"
+Percentual 
+
+"Evolucao Gamer"
+
+"Wins vs Losses"
+plot(c(Wins), c(Losses), main = "Evolucao Gamer", xlab = "Wins", ylab = "Losses", col = "#000080", pch = 19, cex = 2)
+
+"Duration VS Percentual"
+
+"Percentual do final do game em funcao do tempo de Duracao"
+colors <- c("blue", "green", "red", "pink", "yellow")    #Aqui podem ser colocados valores hexadecimais igual no CSS.
+
+mylabel = c("Partida 1", "Partida 2", "Partida 3", "Partida 4", "Partida 5")
+
+pie(Duration, Percentual, init.angle = 90, main = "Duration VS Percentual", col = colors)
+
+legend("bottomright", mylabel, fill = colors)
+
+"Estatisticas"
+#Estatisticas do percentual de finalização do Game. 
+
+Percentual <- c(66, 75, 84, 55, 103)
+
+"Maximo Percentual alcancado: "
+max(Percentual)
+"Minimo Percentual alcancado: "
+min(Percentual)
+
+"Range: "
+max(Percentual) - min(Percentual)
+
+"Média: "
+mean(Percentual)
+
+"Desvio Padrão"
+sd(Percentual)
+
+if (103 > mean(Percentual)) {
+    print("Tendencia de diminuir a performance")
+} else {
+    print("Tendência a aumentar a performance")
+}
+
+
+"Fim da análise de Performance Gamer"
+
+
+
+
+
+
+
+
+
+
+
+
