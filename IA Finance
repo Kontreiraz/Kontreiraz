@@ -1,0 +1,533 @@
+#Título: Khaos Algoritmo.
+##Data: 17/01/2023 ás 11:44h. 
+#Autor: Kontreiraz.
+#Função: O Khaos Algoritmo possui como principal função o gerenciamento de risco utilizando técnicas de IA. 
+
+print("Khaos Algoritmo")
+print("Beta")
+
+# Importar o módulo datetime
+import datetime
+
+# Obter a data e hora atual no horário de Brasília
+agora = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=-3)))
+
+# Formatar a data e hora no formato desejado
+data = agora.strftime("%d/%m/%Y")
+hora = agora.strftime("%H:%M")
+
+
+print("Data: ", data)
+print("Hora: ", hora)
+
+senha_correta = "190284"
+tentativas_restantes = 3
+
+while tentativas_restantes > 0:
+    senha = input("Digite a senha: ")
+    if senha == senha_correta:
+        print("Senha correta! Acesso concedido.")
+        print("Seja bem vindo (a) ao Khaos Algoritmo")
+        print("Este é um algoritmo desenvolvido para realizar o gerenciamento de risco de forma eficiente utilizando técnicas de IA.")
+        print("Funções do Khaos Algoritmo: ")
+        print("1 - Cenário Macroeconômico")
+        print("2 - Gerenciamento de Risco")
+        print("3 - Análise de Ativos")
+        print("4 - Contato com o suporte")
+        print("5 - Encerrar Algoritmo")
+
+        function = int(input("Defina uma das funções: "))
+        if function == 1: 
+          print("Cenário Macroeconômico")
+          print("Regiões Globais: ")
+          print("1 - Brasil")
+          print("2 - Estados Unidos")
+          print("3 - China")
+          print("4 - Zona do Euro")
+          print("5 - Outras")
+
+          option = int(input("Defina a região a ser analisada: "))
+          if option == 1: 
+            print("Brasil")
+          elif option == 2: 
+            print("Estados Unidos")
+          elif option == 3: 
+            print("China")
+          elif option == 4: 
+            print("Zona do Euro")
+          elif option == 5: 
+            print("Outras")
+            region = str(input("Defina outra região para analisar: "))
+            print(region)
+          
+          print("Dados Macroeconômicos")
+          print("Para acessar os dados macroeconômicos acesse o link abaixo: ")
+          link = "https://tradingeconomics.com"
+          print(link)
+
+          print("Taxa de Juros")
+          interest_rate = float(input("Defina a taxa de juros do periodo: "))
+
+          print("Inflação")
+          inflation_rate = float(input("Defina a inflação do periodo: "))
+
+          print("Taxa Real de Juros")
+          real_rate = (1+(interest_rate/100))/(1+(inflation_rate/100))
+          print("Taxa Real de Juros do período: ", real_rate)
+
+          print("Tendência dos Juros")
+          if interest_rate > inflation_rate: 
+            print("Tendência de corte de juros")
+            print("Possível tendência de alta do mercado")
+          else: 
+            print("Tendência de aumento e juros")
+            print("Possível tendência de baixa do mercado")
+          
+
+
+
+
+        elif function == 2: 
+          print("Gerenciamento de Risco")
+          print("O Gerenciamento de Risco é realizado de forma semestral.")
+          print("Com isso é possível verificar a cada seis meses se há a possibilidade de um crash.")
+
+          #Os dados são coletados mensalmente. 
+          #Link para atualizar o algoritmo: https://br.tradingview.com
+          #Aqui serão comparados os indices SPX, NDX, EWZ, VIX, DXY, Ouro e Bitcoin.
+          #A primeira análise realizada foi no periodo de ago/2023 a dez/2023 e mais a última cotação. 
+          #As dados e inputs a serem coletados serão as variações percentuais dos índices.  
+
+          print("Índices")
+
+          #SPX - SP 500
+          #Link SPX: https://br.tradingview.com/chart/PEj0krJi/?symbol=SP%3ASPX
+          spx0 = -1.77 #ago/23
+          spx1 = -4.87 #set/23
+          spx2 = -2.20 #out/23
+          spx3 = 8.92 #nov/23
+          spx4 = 4.42 #dez/23   
+
+          print("S&P 500 Index")
+          spx5 = float(input("Entre com a última variação percentual do S&P 500: "))
+
+          #NDX - Nasdaq 100
+          #Link NDX: https://br.tradingview.com/chart/PEj0krJi/?symbol=NASDAQ%3ANDX
+          ndx0 = -1.62 #ago/23
+          ndx1 = -5.07 #set/23
+          ndx2 = -2.08 #out/23
+          ndx3 = 10.67 #nov/23
+          ndx4 = 5.51 #dez/23
+
+          print("Nasdaq 100 Index")
+          ndx5 = float(input("Entre com a última variação percentual do Nasdaq 100: "))
+
+          #EWZ
+          #Link EWZ: https://br.tradingview.com/chart/PEj0krJi/?symbol=AMEX%3AEWZ
+          ewz0 = -8.92 #ago/23
+          ewz1 = -0.58 #set/23
+          ewz2 = -2.93 #out/23
+          ewz3 = 14.24 #nov/23
+          ewz4 = 2.79 #dez/23
+          
+          print("EWZ Index")
+          ewz5 = float(input("Entre com a última variação percentual do EWZ: "))
+
+          #VIX
+          #Link VIX: https://br.tradingview.com/chart/PEj0krJi/?symbol=TVC%3AVIX
+          vix0 = -0.44  #ago/23
+          vix1 = 29.13 #set/23
+          vix2 = 3.54 #out/23
+          vix3 = -28.79 #nov/23
+          vix4 = -3.64 #dez/23
+
+          print("VIX Index")
+          vix5 = float(input("Entre com a última variação percentual do VIX: "))
+
+          #DXY
+          #Link DXY: https://br.tradingview.com/chart/PEj0krJi/?symbol=TVC%3ADXY
+          dxy0 = 1.74 #ago/23
+          dxy1 = 2.45 #set/23
+          dxy2 = 0.51 #out/23
+          dxy3 = -2.99 #nov/23
+          dxy4 = -2.07 #dez/23
+
+          print("DXY Index")
+          dxy5 = float(input("Entre com a última variação percentual do DXY: ")) 
+
+          #Ouro 
+          #Link Ouro: https://br.tradingview.com/chart/PEj0krJi/?symbol=TVC%3AGOLD
+          gld0 = -1.30 #ago/23
+          gld1 = -4.74 #set/23
+          gld2 = 7.33 #out/23
+          gld3 = 2.65 #nov/23
+          gld4 = 1.31 #dez/23
+
+          print("Cotação do Ouro")
+          gld5 = float(input("Entre com a última variação percentual do ouro: "))
+
+          #Bitcoin
+          #Link BTC: https://br.tradingview.com/chart/PEj0krJi/?symbol=BITSTAMP%3ABTCUSD
+          btc0 = -11.29 #ago/23
+          btc1 = 3.99 #set/23
+          btc2 = 28.54 #out/23
+          btc3 = 8.82 #nov/23
+          btc4 = 12.03 #dez/23
+
+          print("Bitcoin")
+          btc5 = float(input("Entre com a última variação percentual do Bitcoin: "))
+
+
+          #Datasets dos Índices
+          spx_dataset = [spx0, spx1, spx2, spx3, spx4, spx5]
+          ndx_dataset = [ndx0, ndx1, ndx2, ndx3, ndx4, ndx5]
+          ewz_dataset = [ewz0, ewz1, ewz2, ewz3, ewz4, ewz5]
+          vix_dataset = [vix0, vix1, vix2, vix3, vix4, vix5]
+          dxy_dataset = [dxy0, dxy1, dxy2, dxy3, dxy4, dxy5]
+          gld_dataset = [gld0, gld1, gld2, gld3, gld4, gld5]
+          btc_dataset = [btc0, btc1, btc3, btc4, btc4, btc5]
+
+
+          print("Histórico de Cotações")
+
+          import pandas as pd 
+          indices = {
+            "SPX": [spx0, spx1, spx2, spx3, spx4, spx5], 
+            "NDX": [ndx0, ndx1, ndx2, ndx3, ndx4, ndx5], 
+            "EWZ": [ewz0, ewz1, ewz2, ewz3, ewz4, ewz5], 
+            "VIX": [vix0, vix1, vix2, vix3, vix4, vix5], 
+            "DXY": [dxy0, dxy1, dxy2, dxy3, dxy4, dxy5], 
+            "Gold": [gld0, gld1, gld2, gld3, gld4, gld5], 
+            "BTC": [btc0, btc1, btc3, btc4, btc4, btc5]
+          }
+
+          df = pd.DataFrame(indices, index = ["ago/23", "set/23", "out/23", "nov/23", "dez/23", "jan/24"])
+          print(df)
+
+          
+          #Dados Estatisticos dos índices 
+          #SPX 
+          acum_spx = sum(spx_dataset)
+          max_spx = max(spx_dataset)
+          min_spx = min(spx_dataset)
+          range = max_spx - min_spx 
+          
+          import numpy as np 
+          retorno_spx = np.mean(spx_dataset)
+          vol_spx = np.std(spx_dataset)
+          median_spx = np.median(spx_dataset)
+
+          
+          #NDX 
+          acum_ndx = sum(ndx_dataset)
+          max_ndx = max(ndx_dataset)
+          min_ndx = min(ndx_dataset)
+          range = max_ndx - min_ndx
+
+          retorno_ndx = np.mean(ndx_dataset)
+          vol_ndx = np.std(ndx_dataset)
+          median_ndx = np.median(ndx_dataset)
+
+
+          #EWZ
+          acum_ewz = sum(ewz_dataset)
+          max_ewz = max(ewz_dataset)
+          min_ewz = min(ewz_dataset)
+          range = max_ewz - min_ewz 
+
+          retorno_ewz = np.mean(ewz_dataset)
+          vol_ewz = np.std(ewz_dataset)
+          median_ewz = np.median(ewz_dataset)
+
+
+          #VIX
+          acum_vix = sum(vix_dataset)
+          max_vix = max(vix_dataset)
+          min_vix = min(vix_dataset)
+          range = max_vix - min_vix 
+
+          retorno_vix = np.mean(vix_dataset)
+          vol_vix = np.std(vix_dataset)
+          median_vix = np.median(vix_dataset)
+
+
+          #DXY
+          acum_dxy = sum(dxy_dataset)
+          max_dxy = max(dxy_dataset)
+          min_dxy = min(dxy_dataset)
+          range = max_dxy - min_dxy 
+
+          retorno_dxy = np.mean(dxy_dataset)
+          vol_dxy = np.std(dxy_dataset)
+          median_dxy = np.median(dxy_dataset)
+
+
+          #Ouro
+          acum_gld = sum(gld_dataset)
+          max_gld = max(gld_dataset)
+          min_gld = min(gld_dataset)
+          range = max_gld - min_gld 
+
+          retorno_gld = np.mean(gld_dataset)
+          vol_gld = np.std(gld_dataset)
+          median_gld = np.median(gld_dataset)
+
+
+          #Bitcoin
+          acum_btc = sum(btc_dataset)
+          max_btc = max(btc_dataset)
+          min_btc = min(btc_dataset)
+          range = max_btc - min_btc 
+
+          retorno_btc = np.mean(btc_dataset)
+          vol_btc = np.std(btc_dataset)
+          median_btc = np.median(btc_dataset)
+
+
+          print("Histórico dos indicadores")
+
+          import pandas as pd
+
+          indicadores = {
+              "Acumulado": [acum_spx, acum_ndx, acum_ewz, acum_vix, acum_dxy, acum_gld, acum_btc],
+              "Max": [max_spx, max_ndx, max_ewz, acum_vix, acum_dxy, acum_gld, acum_btc], 
+              "Min": [min_spx, min_ndx, min_ewz, min_vix, min_dxy, min_gld, min_btc], 
+              "Retorno": [retorno_spx, retorno_ndx, retorno_ewz, retorno_vix, retorno_dxy, retorno_gld, retorno_btc], 
+              "Vol": [vol_spx, vol_ndx, vol_ewz, vol_vix, vol_dxy, vol_gld, vol_btc], 
+              "Alvo": [median_spx, median_ndx, median_ewz, median_vix, median_dxy, median_gld, median_btc]
+          }
+
+          df_ = pd.DataFrame(indicadores, index = ["SPX", "NDX", "EWZ", "VIX", "DXY", "GLD", "BTC"])
+          print(df_)
+
+          print("Correlação")
+          print(df.corr())
+
+          import matplotlib.pyplot as plt 
+          df.plot()
+          plt.title("Gráfico comparativo entre Índices")
+          plt.show()
+
+          retorno_indices = [retorno_spx, retorno_ndx, retorno_ewz]
+          retorno_vol = [retorno_vix, retorno_dxy, retorno_gld]
+
+          total_retorno_indices = sum(retorno_indices)
+          total_retorno_vol = sum(retorno_vol)
+
+          print("Total dos retornos dos índices: ", total_retorno_indices)
+          print("Total dos retornos da volatilidade: ", total_retorno_vol)
+
+          #Se o somatório dos retornos dos índices forem maior do que o somatório do retorno da volatilidade -  não haverá o colapso. 
+          #Se o somatório dos retorno da volatilidade forem maior do que o somatório do retorno dos índices - haverá o colapso. 
+          if total_retorno_indices > total_retorno_vol: 
+            print("Baixa probabilidade de haver um colapso.")
+          else: 
+            print("Alta probabilidade de haver um colapso.")
+
+
+
+        elif function == 3: 
+          print("Análise de Ativos")
+          asset = str(input("Digite o código de um ativo: "))
+          print(asset)
+
+          print("Cotações dos últimos 6 meses")
+          cot0 = float(input("Entre com a cotação no mês 1: "))
+          var0 = float(input("Entre com a variação percentual do ativo no mês 1: "))
+
+          cot1 = float(input("Entre com a cotação no mês 2: "))
+          var1 = ((cot1/cot0)-1)*100
+          cot2 = float(input("Entre com a cotação no mês 3: "))
+          var2 = ((cot2/cot1)-1)*100
+          cot3 = float(input("Entre com a cotação no mês 4: "))
+          var3 = ((cot3/cot2)-1)*100
+          cot4 = float(input("Entre com a cotação no mês 5: "))
+          var4 = ((cot4/cot3)-1)*100
+          cot5 = float(input("Entre com a cotação no mês 6: "))
+          var5 = ((cot5/cot4)-1)*100
+
+          quote_asset = [var0, var1, var2, var3, var4, var5]
+
+          print("Machine Learning")
+
+          print("Cenário Long")
+
+          #Iniciar a contagem de elementos positivos e negativos. 
+          contagem_positivos = 0
+          contagem_negativos = 0
+
+          #Iterar sobre a lista. 
+          for elemento in quote_asset: 
+            #Verificar se o elemento é positivo ou negativo. 
+            if elemento > 0: 
+              contagem_positivos += 1
+            elif elemento < 0: 
+              contagem_negativos += 1
+          
+          diferenca = contagem_positivos - contagem_negativos 
+
+          print("Total de Verdadeiros Positivos: ", contagem_positivos)
+          print("Total de Falsos Positivos: ", diferenca)
+
+          print("Cenário Short")
+          #Iniciar a contagem de elementos negativos. 
+          verdadeiros_negativos = 0
+          falsos_negativos = 0 
+
+          #Iterar sobre a lista 
+          for elemento in quote_asset: 
+            #Verificar se o elemento é negativo. 
+            if elemento < 0: 
+              verdadeiros_negativos += 1
+            elif elemento > 0: 
+              falsos_negativos += 1
+          
+          diferenca_ = verdadeiros_negativos - falsos_negativos 
+
+          print("Total de Verdadeiros Negativos: ", verdadeiros_negativos)
+          print("Total de Falsos Negativos: ", diferenca_)
+
+          total = contagem_positivos + diferenca + verdadeiros_negativos + diferenca_
+
+          #Algumas métricas de Machine Learning 
+          #Acurácia 
+          #accur = (VP + VN)/total
+          accur = (contagem_positivos + verdadeiros_negativos)/total 
+          print("Acurácia: ", accur)
+
+          #Precisão 
+          #precision = VP/(VP + FP)
+          precision = contagem_positivos/(contagem_positivos + diferenca_)
+          print("Precisão: ", precision)
+
+          #Sensibilidade 
+          #Recall = VP/(VP + FN)
+          recall = contagem_positivos/(contagem_positivos + diferenca_)
+          print("Recall: ", recall)
+
+          #F1 - Score 
+          #f1 = 2 * (precision * recall)/ (precision + recall)
+          f1_score = 2 * (precision * recall)/(precision + recall)
+          print("F1 - Score: ", f1_score)
+
+          print("Análise Estatistica do Ativo")
+          print(asset)
+          
+          import numpy as np 
+          acum_asset = sum(quote_asset)
+          max_asset = max(quote_asset)
+          min_asset = min(quote_asset)
+          range = max_asset - min_asset 
+
+          retorno_asset = np.mean(quote_asset)
+          vol_asset = np.std(quote_asset)
+          median_asset = np.median(quote_asset)
+
+          print("Percentual acumulado do ativo: ", acum_asset)
+          print("Máxima oscilação do ativo: ", max_asset)
+          print("Mínima oscilação do ativo: ", min_asset)
+          print("Intervalo de oscilações do ativo: ", range)
+          print("Retorno do ativo: ", retorno_asset)
+          print("Volatilidade do ativo: ", vol_asset)
+          print("Oscilação alvo do ativo: ", median_asset)
+
+          #Gráfico comparativo do ativo com outros benchmarks. 
+          
+          print("Índices")
+
+          #SPX - SP 500
+          #Link SPX: https://br.tradingview.com/chart/PEj0krJi/?symbol=SP%3ASPX
+          spx0 = -1.77 #ago/23
+          spx1 = -4.87 #set/23
+          spx2 = -2.20 #out/23
+          spx3 = 8.92 #nov/23
+          spx4 = 4.42 #dez/23   
+
+          print("S&P 500 Index")
+          spx5 = float(input("Entre com a última variação percentual do S&P 500: "))
+
+          #NDX - Nasdaq 100
+          #Link NDX: https://br.tradingview.com/chart/PEj0krJi/?symbol=NASDAQ%3ANDX
+          ndx0 = -1.62 #ago/23
+          ndx1 = -5.07 #set/23
+          ndx2 = -2.08 #out/23
+          ndx3 = 10.67 #nov/23
+          ndx4 = 5.51 #dez/23
+
+          print("Nasdaq 100 Index")
+          ndx5 = float(input("Entre com a última variação percentual do Nasdaq 100: "))
+
+          #EWZ
+          #Link EWZ: https://br.tradingview.com/chart/PEj0krJi/?symbol=AMEX%3AEWZ
+          ewz0 = -8.92 #ago/23
+          ewz1 = -0.58 #set/23
+          ewz2 = -2.93 #out/23
+          ewz3 = 14.24 #nov/23
+          ewz4 = 2.79 #dez/23
+          
+          print("EWZ Index")
+          ewz5 = float(input("Entre com a última variação percentual do EWZ: "))
+
+          
+
+          #Bitcoin
+          #Link BTC: https://br.tradingview.com/chart/PEj0krJi/?symbol=BITSTAMP%3ABTCUSD
+          btc0 = -11.29 #ago/23
+          btc1 = 3.99 #set/23
+          btc2 = 28.54 #out/23
+          btc3 = 8.82 #nov/23
+          btc4 = 12.03 #dez/23
+
+          print("Bitcoin")
+          btc5 = float(input("Entre com a última variação percentual do Bitcoin: "))
+
+
+          #Datasets dos Índices
+          spx_dataset = [spx0, spx1, spx2, spx3, spx4, spx5]
+          ndx_dataset = [ndx0, ndx1, ndx2, ndx3, ndx4, ndx5]
+          ewz_dataset = [ewz0, ewz1, ewz2, ewz3, ewz4, ewz5]
+          btc_dataset = [btc0, btc1, btc3, btc4, btc4, btc5]
+
+          #Gráfico comparativo dos Benchmarks 
+          import matplotlib.pyplot as plt 
+          plt.plot(quote_asset, label = 'Ativo')
+          plt.plot(spx_dataset, label = 'SPX')
+          plt.plot(ndx_dataset, label = 'NDX')
+          plt.plot(ewz_dataset, label = 'EWZ')
+          plt.plot(btc_dataset, label = 'BTC')
+
+          plt.title("Gráfico dos Benchmarks")
+          plt.legend()
+          plt.show()
+
+
+
+
+
+
+        elif function == 4: 
+          print("Contato com o suporte")
+          print("WhatsApp link: ") 
+          print("https://web.whatsapp.com")
+          print("e-mail link: ")
+          print("https://www.microsoft.com/en/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fowa%2f0%2f%3fstate%3d1%26redirectTo%3daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwvMC8&sdf=0") 
+
+        elif function == 5: 
+          print("Encerrando Algoritmo.....")
+          print("Grato pela sua utilização.")
+
+
+
+
+
+
+        break
+    else:
+        tentativas_restantes -= 1
+        if tentativas_restantes == 0:
+            print("Você excedeu o número máximo de tentativas.")
+            print("Acesso negado.")
+        else:
+            print(f"Senha incorreta. Você tem {tentativas_restantes} tentativas restantes.")
+
+print("Developed by:\nKontreiraz")
