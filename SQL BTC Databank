@@ -1,0 +1,59 @@
+--Revisando Código
+--Data: 29/09/2023 ás 23:53h 
+
+--Título: Cripto Databank
+--Data: 29/09/2023 ás 23:46h;
+--Autor: Kontreiraz;
+--Descrição: Banco de dados didático para analisar os preços do Bitcoin (BTC) e Ethereum (ETH);
+
+/*Parte 1: Criando a tabela;
+Criação da tabela que conterá os dados das criptomoedas. 
+*/
+
+
+Create table Criptos (
+  ID int, 
+  Asset varchar (255),
+  Period varchar (255), 
+  Price float (255), 
+  Var float (255)
+  
+  );
+
+/*Parte 2: Inserindo dados. 
+Inserindo dados nas colunas. 
+*/
+
+/*Dados da variação de preço do Bitcoin em 6 meses, periodo de 01/04/2023 á 30/09/2023. */
+insert into Criptos (ID, Asset, Period, Price, Var)
+values (1, 'BTC', 'Month', 29247.14, 2.71), 
+(2, 'BTC', 'Month', 27223.08, -6.92), 
+(3, 'BTC', 'Month', 30466.72, 11.92), 
+(4, 'BTC', 'Month', 29230.67, 4.06), 
+(5, 'BTC', 'Month', 25932.45, -11.28),
+(6, 'BTC', 'Month', 26926.71, 3.83);
+
+/*Dados da variação de preço do Ethereum em 6 meses, periodo de 01/04/2023 á 30/09/2023.*/
+
+insert into Criptos (ID, Asset, Period, Price, Var)
+values (7, 'ETH', 'Month', 1871.29, 2.70), 
+(8, 'ETH', 'Month', 1874.07, 0.15), 
+(9, 'ETH', 'Month', 1933.50, 3.17), 
+(10, 'ETH', 'Month', 1856.48,-3.98), 
+(11, 'ETH', 'Month', 1646.27, -11.32),
+(12, 'ETH', 'Month', 1676.09, 0.47);
+
+
+select MAX(Price) as 'Maior Preço', 
+Min(Price) as 'Menor Preço', 
+Max(Price) - Min(Price) as 'Range', 
+Avg(Price) as 'Preço Médio',
+Sum(Var) as 'Acumulado',
+Count(Asset) as 'Número de Registros'
+from Criptos
+where Asset = 'BTC';
+
+select Price as 'Ultima cotação' from Criptos
+where ID = 6;
+        
+        
