@@ -1,0 +1,2777 @@
+#Título: Algoritmo iAgro 
+#Data: 03/01/2024 ás 10:48h.  
+#Autor: Kontreiraz. 
+#Descrição: O iAgro (Innovative Agro) é uma proposta de algoritmo para desenvolver análise de dados para o setor de agronegócio. 
+
+
+print("iAgro")
+print("Beta")
+
+# Importar o módulo datetime
+import datetime
+
+# Obter a data e hora atual no horário de Brasília
+agora = datetime.datetime.now(tz=datetime.timezone(datetime.timedelta(hours=-3)))
+
+# Formatar a data e hora no formato desejado
+data = agora.strftime("%d/%m/%Y")
+hora = agora.strftime("%H:%M")
+
+
+print("Data: ", data)
+print("Hora: ", hora)
+
+
+
+
+# Gerar uma senha de 6 dígitos aleatórios
+senha = 190284
+
+# Definir o número de tentativas
+tentativas = 3
+
+# Pedir ao usuário para digitar a senha
+print("Digite a senha de 6 dígitos:")
+
+# Enquanto houver tentativas
+while tentativas > 0:
+  # Ler a entrada do usuário
+  entrada = int(input())
+
+  # Se a entrada for igual à senha
+  if entrada == senha:
+    # Parabenizar o usuário e encerrar o programa
+    print("Senha correta. Acesso concedido.")
+    empresa = str(input("Entre com o nome da sua empresa: "))
+    print("Sejam bem vindos (as) ao IAgro")
+    print("Apresentação")
+    print("O IAgro é a sigla para Innovative Agro")
+    print("Um algoritmo para analises do agronegócio utilizando técnicas de IA.")
+
+    print("Funções do IAgro")
+    print("1 - Cenário Macroeconômico")
+    print("2 - Notícias")
+    print("3 - Análises das Cotações")
+    print("4 - Indicadores de Atividade")
+    print("5 - Suporte")
+
+    print("Gostaria de definir uma função?")
+    print("1 - Sim\n2 - Não")
+    option = int(input("Entre com a sua opção: "))
+    if option == 1: 
+      function = int(input("Defina a sua função: "))
+      if function == 1: 
+        print("Cenário Macroeconômico")
+        print("Serão analisados os seguintes dados: ")
+        print("**Taxa de Juros\n**Inflação\n**Balança Comercial")
+        print("Das seguintes regiões: ")
+        print("1 - Brasil")
+        print("2 - Estados Unidos")
+        print("3 - China")
+        print("4 - Zona do Euro")
+        #Zona do Euro --> União Européia. 
+        print("5 - Outras")
+
+        
+        region = int(input("Defina a região da análise: "))
+        if region == 1: 
+          print("Brasil")
+          print("Dados Macroeconômicos")
+          print("Para acesso aos dados econômicos acesse o link abaixo: ")
+          print("https://tradingeconomics.com")
+          
+          print("Taxa de Juros")
+          interest_rate = float(input("Entre com a taxa de juros do periodo: "))
+          inflation_rate = float(input("Entre com a taxa de inflação do periodo: "))
+          real_rate = (1+(interest_rate/100))/(1+(inflation_rate/100))
+          print("Taxa Real do período: ", real_rate)
+          
+          print("Tendência do Período")
+          if interest_rate > inflation_rate: 
+            print("Tendência de queda dos juros")
+            print("Possível aquecimento do setor")
+          else: 
+            print("Tendência e alta dos juros")
+            print("Esfriamento do setor")
+
+          print("Balança Comercial")
+          exports = float(input("Entre com o volume total de exportações: "))
+          imports = float(input("Entre com o volume total das importações: "))
+          saldo = exports - imports 
+          print("Saldo da Balança Coemrcial: ", saldo)
+          print("Resultado: ")
+          if saldo > 0: 
+            print("Superavit Comercial")
+          else: 
+            print("Deficit Comercial")
+
+        elif region == 2: 
+          print("Estados Unidos")
+          print("Dados Macroeconômicos")
+          print("Para acesso aos dados econômicos acesse o link abaixo: ")
+          print("https://tradingeconomics.com")
+          
+          print("Taxa de Juros")
+          interest_rate = float(input("Entre com a taxa de juros do periodo: "))
+          inflation_rate = float(input("Entre com a taxa de inflação do periodo: "))
+          real_rate = (1+(interest_rate/100))/(1+(inflation_rate/100))
+          print("Taxa Real do período: ", real_rate)
+          
+          print("Tendência do Período")
+          if interest_rate > inflation_rate: 
+            print("Tendência de queda dos juros")
+            print("Possível aquecimento do setor")
+          else: 
+            print("Tendência e alta dos juros")
+            print("Esfriamento do setor")
+
+          print("Balança Comercial")
+          exports = float(input("Entre com o volume total de exportações: "))
+          imports = float(input("Entre com o volume total das importações: "))
+          saldo = exports - imports 
+          print("Saldo da Balança Coemrcial: ", saldo)
+          print("Resultado: ")
+          if saldo > 0: 
+            print("Superavit Comercial")
+          else: 
+            print("Deficit Comercial")
+
+
+
+        elif region == 3: 
+          print("China")
+          print("Dados Macroeconômicos")
+          print("Para acesso aos dados econômicos acesse o link abaixo: ")
+          print("https://tradingeconomics.com")
+          
+          print("Taxa de Juros")
+          interest_rate = float(input("Entre com a taxa de juros do periodo: "))
+          inflation_rate = float(input("Entre com a taxa de inflação do periodo: "))
+          real_rate = (1+(interest_rate/100))/(1+(inflation_rate/100))
+          print("Taxa Real do período: ", real_rate)
+          
+          print("Tendência do Período")
+          if interest_rate > inflation_rate: 
+            print("Tendência de queda dos juros")
+            print("Possível aquecimento do setor")
+          else: 
+            print("Tendência e alta dos juros")
+            print("Esfriamento do setor")
+
+          print("Balança Comercial")
+          exports = float(input("Entre com o volume total de exportações: "))
+          imports = float(input("Entre com o volume total das importações: "))
+          saldo = exports - imports 
+          print("Saldo da Balança Coemrcial: ", saldo)
+          print("Resultado: ")
+          if saldo > 0: 
+            print("Superavit Comercial")
+          else: 
+            print("Deficit Comercial")
+
+
+
+        elif region == 4: 
+          print("Zona do Euro")
+          print("Dados Macroeconômicos")
+          print("Para acesso aos dados econômicos acesse o link abaixo: ")
+          print("https://tradingeconomics.com")
+          
+          print("Taxa de Juros")
+          interest_rate = float(input("Entre com a taxa de juros do periodo: "))
+          inflation_rate = float(input("Entre com a taxa de inflação do periodo: "))
+          real_rate = (1+(interest_rate/100))/(1+(inflation_rate/100))
+          print("Taxa Real do período: ", real_rate)
+          
+          print("Tendência do Período")
+          if interest_rate > inflation_rate: 
+            print("Tendência de queda dos juros")
+            print("Possível aquecimento do setor")
+          else: 
+            print("Tendência e alta dos juros")
+            print("Esfriamento do setor")
+
+          print("Balança Comercial")
+          exports = float(input("Entre com o volume total de exportações: "))
+          imports = float(input("Entre com o volume total das importações: "))
+          saldo = exports - imports 
+          print("Saldo da Balança Coemrcial: ", saldo)
+          print("Resultado: ")
+          if saldo > 0: 
+            print("Superavit Comercial")
+          else: 
+            print("Deficit Comercial")
+
+
+
+        elif region == 5: 
+          print("Outras")
+          other_region = str(input("Entre com a outra região que deseja analisar: "))
+          print(other_region)
+
+          print("Dados Macroeconômicos")
+          print("Para acesso aos dados econômicos acesse o link abaixo: ")
+          print("https://tradingeconomics.com")
+          
+          print("Taxa de Juros")
+          interest_rate = float(input("Entre com a taxa de juros do periodo: "))
+          inflation_rate = float(input("Entre com a taxa de inflação do periodo: "))
+          real_rate = (1+(interest_rate/100))/(1+(inflation_rate/100))
+          print("Taxa Real do período: ", real_rate)
+          
+          print("Tendência do Período")
+          if interest_rate > inflation_rate: 
+            print("Tendência de queda dos juros")
+            print("Possível aquecimento do setor")
+          else: 
+            print("Tendência e alta dos juros")
+            print("Esfriamento do setor")
+
+          print("Balança Comercial")
+          exports = float(input("Entre com o volume total de exportações: "))
+          imports = float(input("Entre com o volume total das importações: "))
+          saldo = exports - imports 
+          print("Saldo da Balança Coemrcial: ", saldo)
+          print("Resultado: ")
+          if saldo > 0: 
+            print("Superavit Comercial")
+          else: 
+            print("Deficit Comercial")
+
+      elif function == 2: 
+        print("Notícias")
+        print("Link de acesso ao Portal do Agronegócio: ")
+        print("https://www.portaldoagronegocio.com.br/noticias")
+        
+      elif function == 3: 
+        print("Análises das Cotações")
+        print("O Algoritmo IAgro analisa dados de 4 principais culturas: ")
+        print("1 - Soja")
+        print("2 - Milho")
+        print("3 - Boi")
+        print("4 - Outras")
+        
+        #O usuário deverá digitar a cultura produzida pela empresa. 
+        cultura = str(input("Digite a cultura produzida pela empresa: "))
+        if cultura == "Outras": 
+          outra_cultura = str(input("Defina qual outra cultura da empresa: "))
+          print(outra_cultura)
+
+
+        #Links B3: 
+        #Soja: https://br.tradingview.com/chart/PEj0krJi/?symbol=BMFBOVESPA%3ASJC1%21
+        #Boi: https://br.tradingview.com/chart/PEj0krJi/?symbol=BMFBOVESPA%3ASJC1%21
+        #Milho: https://br.tradingview.com/chart/PEj0krJi/?symbol=BMFBOVESPA%3ASJC1%21
+
+        if cultura == "outras": 
+          print("Cotação da", outra_cultura, "em 12 meses")
+        else: 
+          print("Cotação da", cultura, "em 12 meses")
+        
+
+
+        
+        if cultura == "Soja":
+          print("Cotação da Soja nos últimos 12 meses")
+          print("Obs: Cotações em dólar")
+          
+          import pandas as pd 
+          soja = {
+              "Preço": [33.91,32.61,33.19,31.29,28.65,31.79,30.21,30.18,28.11,28.89,29.60,28.92], 
+              "Var%": [1.43,-3.84,1.79,-5.73,-8.42,10.94,-4.96,-0.13,-6.85,2.78,2.46,-4.25]
+          }
+          df = pd.DataFrame(soja, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+          print(df)
+
+          t0 = [0,1,2,3,4,5,6,7,8,9,10,11]
+          price_dataset = [33.91,32.61,33.19,31.29,28.65,31.79,30.21,30.18,28.11,28.89,29.60,28.92]
+          var_dataset = [1.43,-3.84,1.79,-5.73,-8.42,10.94,-4.96,-0.13,-6.85,2.78,2.46,-4.25]
+
+          import matplotlib.pyplot as plt
+          plt.plot(t0, var_dataset)
+          plt.title("Evolução Gráfica - Soja")
+          plt.grid(True)
+          plt.show()
+
+          import numpy as np 
+
+          #Preço Máximo da Soja no período 
+          max_price_soja = max(price_dataset)
+          print("O preço máximo da Soja no período é: ", max_price_soja)
+
+          #Preço Mínimo da Soja no período 
+          min_price_soja = min(price_dataset)
+          print("O preço mínimo da Soja no período é: ", min_price_soja)
+
+          #Mediana do Preço da Soja no período
+          median_price_soja = np.median(price_dataset)
+          print("Preço alvo da Soja no período: ", median_price_soja)
+
+         
+
+
+          #Preço Médio da Soja no período
+          mean_price_soja = np.mean(price_dataset)
+          print("Preço Médio da Soja no período: ", mean_price_soja)
+          
+          print("Tendência das Cotações")
+          if mean_price_soja > price_dataset[11]: 
+            print("Tendência de alta dos preços")
+          else: 
+            print("Tendência de queda dos preços")
+          
+          #Volatilidade dos preços da Soja 
+          std_price_soja = np.std(price_dataset)
+          print("Volatilidade do preço da Soja no periodo: ", std_price_soja)
+
+          #Cotação máxima alcancavel 
+          max_soja = mean_price_soja + 3* std_price_soja
+          print("Cotação máxima alcancavel pela Soja no período: ", max_soja)
+
+
+          #Cotação mínima alcancavel
+          min_soja = mean_price_soja - 3* std_price_soja
+          print("Cotação mínima alcancavel pela Soja no período: ", min_soja)
+
+          
+         
+        elif cultura == "Milho": 
+          #Link para atualização das cotações do milho: https://br.tradingview.com/chart/PEj0krJi/?symbol=BMFBOVESPA%3ACCM1%21
+          print("Cotação do Milho nos últimos 12 meses")
+          print("Obs: Cotações em dólar")
+
+          import pandas as pd 
+
+          milho = {
+              "Preço": [89,87.29,79.63,65.29,53.71,53.30,55.35,53.15,58.29,60.70,69.88,71.12], 
+              "Var%": [-0.92,-1.92,-8.78,-18.01,-17.74,-0.76,3.85, -3.97, 9.67,4.13,15.12,1.77]
+          }
+
+          df = pd.DataFrame(milho, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+          print(df)
+
+          t0 = [0,1,2,3,4,5,6,7,8,9,10,11]
+          price_dataset = [89,87.29,79.63,65.29,53.71,53.30,55.35,53.15,58.29,60.70,69.88,71.12]
+          var_dataset = [-0.92,-1.92,-8.78,-18.01,-17.74,-0.76,3.85, -3.97, 9.67,4.13,15.12,1.77]
+
+          import matplotlib.pyplot as plt 
+          plt.plot(t0, var_dataset)
+          plt.title("Evolução Gráfica - Milho")
+          plt.grid(True)
+          plt.show()
+
+          import numpy as np 
+
+          #Preço Máximo do Milho no período 
+          max_price_milho = max(price_dataset)
+          print("O preço máximo do Milho no período é: ", max_price_milho)
+
+          #Preço Mínimo do Milho no período 
+          min_price_milho = min(price_dataset)
+          print("O preço mínimo do Milho no período é: ", min_price_milho)
+
+          #Mediana do Preço do Milho no período
+          median_price_milho = np.median(price_dataset)
+          print("Preço alvo do Milho no período: ", median_price_milho)
+
+         
+
+
+          #Preço Médio do Milho no período
+          mean_price_milho = np.mean(price_dataset)
+          print("Preço Médio do Milho no período: ", mean_price_milho)
+          
+          print("Tendência das Cotações")
+          if mean_price_milho > price_dataset[11]: 
+            print("Tendência de alta dos preços")
+          else: 
+            print("Tendência de queda dos preços")
+          
+          #Volatilidade dos preços do milho 
+          std_price_milho = np.std(price_dataset)
+          print("Volatilidade do preço do Milho no periodo: ", std_price_milho)
+
+          #Cotação máxima alcancavel 
+          max_milho = mean_price_milho + 3* std_price_milho
+          print("Cotação máxima alcancavel pelo Milho no período: ", max_milho)
+
+
+          #Cotação mínima alcancavel
+          min_milho = mean_price_milho - 3* std_price_milho
+          print("Cotação mínima alcancavel pelo Milho no período: ", min_milho)
+
+
+
+
+          
+        elif cultura == "Boi": 
+          #Link para atualização das cotações do boi: https://br.tradingview.com/chart/PEj0krJi/?symbol=BMFBOVESPA%3ABGI1%21
+          print("Cotação do Boi Gordo nos últimos 12 meses")
+          print("Obs: Cotações em dólar") 
+
+
+          import pandas as pd 
+
+          boi = {
+              "Preço": [298.40,295.90,291.55,263.95,236.75,263.25, 232.30,195.10,240.60,235.45,248.90,247.75], 
+              "Var%": [3.02,-0.84,-1.47,-9.47,-10.30,11.19,-11.76,-16.01,23.32,-2.14,5.71,-0.46]
+          }
+
+          df = pd.DataFrame(boi, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+          print(df)
+
+          t0 = [0,1,2,3,4,5,6,7,8,9,10,11]
+          price_dataset = [298.40,295.90,291.55,263.95,236.75,263.25, 232.30,195.10,240.60,235.45,248.90,247.75]
+          var_dataset = [3.02,-0.84,-1.47,-9.47,-10.30,11.19,-11.76,-16.01,23.32,-2.14,5.71,-0.46]
+
+          import matplotlib.pyplot as plt 
+          plt.plot(t0, var_dataset)
+          plt.title("Evolução Gráfica - Boi Gordo")
+          plt.grid(True)
+          plt.show()
+
+          import numpy as np 
+
+          #Preço Máximo do Boi no período 
+          max_price_boi = max(price_dataset)
+          print("O preço máximo do Boi no período é: ", max_price_boi)
+
+          #Preço Mínimo do Boi no período 
+          min_price_boi = min(price_dataset)
+          print("O preço mínimo do Boi no período é: ", min_price_boi)
+
+          #Mediana do Preço do Boi no período
+          median_price_boi = np.median(price_dataset)
+          print("Preço alvo do Boi no período: ", median_price_boi)
+
+
+          #Preço Médio do Boi no período
+          mean_price_boi = np.mean(price_dataset)
+          print("Preço Médio do Boi no período: ", mean_price_boi)
+          
+          print("Tendência das Cotações")
+          if mean_price_boi > price_dataset[11]: 
+            print("Tendência de alta dos preços")
+          else: 
+            print("Tendência de queda dos preços")
+          
+          #Volatilidade dos preços do boi 
+          std_price_boi = np.std(price_dataset)
+          print("Volatilidade do preço do Boi no periodo: ", std_price_boi)
+
+          #Cotação máxima alcancavel 
+          max_boi = mean_price_boi + 3* std_price_boi
+          print("Cotação máxima alcancavel pelo Boi no período: ", max_boi)
+
+
+          #Cotação mínima alcancavel
+          min_boi = mean_price_boi - 3* std_price_boi
+          print("Cotação mínima alcancavel pelo Boi no período: ", min_boi)
+
+
+        elif cultura == "Outras": 
+          print(outra_cultura)
+          print("Defina as cotações dos últimos 12 meses")
+          cot1 = float(input("Entre com a cotação no mês 1: "))
+          var1 = (0/cot1)
+          cot2 = float(input("Entre com a cotação no mês 2: "))
+          var2 = ((cot2/cot1)-1)*100
+          cot3 = float(input("Entre com a cotação no mês 3: "))
+          var3 = ((cot3/cot2)-1)*100
+          cot4 = float(input("Entre com a cotação no mês 4: "))
+          var4 = ((cot4/cot3)-1)*100
+          cot5 = float(input("Entre com a cotação no mês 5: "))
+          var5 = ((cot5/cot4)-1)*100
+          cot6 = float(input("Entre com a cotação no mês 6: "))
+          var6 = ((cot6/cot5)-1)*100
+          cot7 = float(input("Entre com a cotação no mês 7: "))
+          var7 = ((cot7/cot6)-1)*100
+          cot8 = float(input("Entre com a cotação no mês 8: "))
+          var8 = ((cot8/cot7)-1)*100
+          cot9 = float(input("Entre com a cotação no mês 9: "))
+          var9 = ((cot9/cot8)-1)*100
+          cot10 = float(input("Entre com a cotação no mês 10: "))
+          var10 = ((cot10/cot9)-1)*100
+          cot11 = float(input("Entre com a cotação no mês 11: "))
+          var11 = ((cot11/cot10)-1)*100
+          cot12 = float(input("Entre com a cotação no mês 12: "))
+          var12 = ((cot12/cot11)-1)*100
+
+          import pandas as pd 
+
+          cultivo = {
+              "Preço": [cot1,cot2,cot3,cot4,cot5,cot6,cot7,cot8,cot9,cot10,cot11,cot12],
+              "Var%": [var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11,var12]
+          }
+
+          df = pd.DataFrame(cultivo, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+          print(df)
+
+          price_dataset = [cot1,cot2,cot3,cot4,cot5,cot6,cot7,cot8,cot9,cot10,cot11,cot12]
+          var_dataset = [var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11,var12]
+
+          import matplotlib.pyplot as plt 
+          plt.plot(price_dataset)
+          plt.title("Evolução Gráfica")
+          plt.grid(True)
+          plt.show()
+
+
+          import numpy as np 
+
+          #Preço Máximo no período 
+          max_price = max(price_dataset)
+          print("O preço máximo no período é: ", max_price)
+
+          #Preço Mínimo no período
+          min_price = min(price_dataset)
+          print("O preço mínimo no período é: ", min_price)
+
+          #Mediana do período
+          median_price = np.median(price_dataset)
+          print("Preço alvo no período: ", median_price)
+
+
+          #Preço Médio no período
+          mean_price = np.mean(price_dataset)
+          print("Preço Médio no período: ", mean_price)
+          
+          print("Tendência das Cotações")
+          if mean_price > price_dataset[11]: 
+            print("Tendência de alta dos preços")
+          else: 
+            print("Tendência de queda dos preços")
+          
+          #Volatilidade dos preços 
+          std_price = np.std(price_dataset)
+          print("Volatilidade no periodo: ", std_price)
+
+          #Cotação máxima alcancavel 
+          max_ = mean_price + 3* std_price
+          print("Cotação máxima alcancavel no período: ", max_)
+
+
+          #Cotação mínima alcancavel
+          min_ = mean_price - 3* std_price
+          print("Cotação mínima alcancavel no período: ", min_)
+
+
+
+
+
+ 
+        
+
+
+
+
+      elif function == 4: 
+        print("Indicadores de Atividade")
+        print("Cotação histórica do Dólar em 12 meses")
+
+        import pandas as pd 
+
+        dolar = {
+            "dolar": [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85],
+            "var%": [-4.02, 3.21, -3.31, -1.48, 1.33, -5.26, -1.37, 4.86, 1.58, 0.07, -2.16, -1.55]
+        }
+
+        df = pd.DataFrame(dolar, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+        print(df)
+
+        t0 = [0,1,2,3,4,5,6,7,8,9,10,11]
+        var_dataset = [-4.02, 3.21, -3.31, -1.48, 1.33, -5.26, -1.37, 4.86, 1.58, 0.07, -2.16, -1.55]
+        dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+        import matplotlib.pyplot as plt
+        plt.plot(t0, var_dataset)
+        plt.title("Evolução Gráfica do Dólar")
+        plt.grid(True)
+        plt.show()
+
+
+        print("Formação do Preço de Venda")
+       
+        cultivo = str(input("Entre com o produto a ser negociado: "))
+        
+        preco_compra = float(input("Digite o preço de compra do produto (R$): "))
+        margem = float(input("Entre com a margem de lucro do produto: "))
+        #A margem de lucro de ser estimada pelo produtor. 
+
+        preco_venda = preco_compra + (preco_compra * (margem/100))
+        print("Preço de venda: ", preco_venda)
+
+        preco_venda_usd = preco_venda/(dolar[11])
+        print("Preço de Venda em dólar: ", preco_venda_usd)
+
+        print("Provisões para os próximos 12 meses")
+        print("Selecione uma das commodities para análise: ")
+        print("1 - Soja\n2 - Milho\n3 - Boi Gordo")
+        option = int(input("Defina a sua opção: "))
+        
+        if option == 1: 
+          print("Provisão de Resultados para a Soja")
+          print("Selecione um dos indicadores de atividade: ")
+          print("1 - Receitas e Custos")
+          print("2 - Impostos")
+          print("3 - Perdas")
+          print("4 - Lucros")
+          print("5 - Retorno dos Investimentos")
+          provisao = int(input("Defina a provisão a ser calculada: "))
+          if provisao == 1: 
+            print("Provisão para Receitas e Custos")
+            print("Receitas")
+            sacas = int(input("Entre com o número de sacas produzidas: "))
+            margem = float(input("Entre com a margem de lucro: "))
+
+            price_dataset = [33.91,32.61,33.19,31.29,28.65,31.79,30.21,30.18,28.11,28.89,29.60,28.92]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            #Preço de Venda em Dólar
+            pv_usd0 = price_dataset[0] + (price_dataset[0] * (margem/100))
+            pv_usd1 = price_dataset[1] + (price_dataset[1] * (margem/100))
+            pv_usd2 = price_dataset[2] + (price_dataset[2] * (margem/100))
+            pv_usd3 = price_dataset[3] + (price_dataset[3] * (margem/100))
+            pv_usd4 = price_dataset[4] + (price_dataset[4] * (margem/100))
+            pv_usd5 = price_dataset[5] + (price_dataset[5] * (margem/100))
+            pv_usd6 = price_dataset[6] + (price_dataset[6] * (margem/100))
+            pv_usd7 = price_dataset[7] + (price_dataset[7] * (margem/100))
+            pv_usd8 = price_dataset[8] + (price_dataset[8] * (margem/100))
+            pv_usd9 = price_dataset[9] + (price_dataset[9] * (margem/100))
+            pv_usd10 = price_dataset[10] + (price_dataset[10] * (margem/100))
+            pv_usd11 = price_dataset[11] + (price_dataset[11] * (margem/100))
+            
+            #Variação percentual dos preços em Dólar
+            var0 = 0
+            var1 = ((pv_usd2/pv_usd1)-1)*100
+            var2 = ((pv_usd3/pv_usd2)-1)*100
+            var3 = ((pv_usd4/pv_usd3)-1)*100
+            var4 = ((pv_usd5/pv_usd4)-1)*100
+            var5 = ((pv_usd6/pv_usd5)-1)*100
+            var6 = ((pv_usd7/pv_usd6)-1)*100
+            var7 = ((pv_usd8/pv_usd7)-1)*100
+            var8 = ((pv_usd9/pv_usd8)-1)*100
+            var9 = ((pv_usd10/pv_usd9)-1)*100 
+            var10 = ((pv_usd11/pv_usd10)-1)*100
+            
+
+            receita_usd = [pv_usd0*sacas, pv_usd1*sacas, pv_usd2*sacas, pv_usd3*sacas, pv_usd4*sacas, pv_usd5*sacas, pv_usd6*sacas, pv_usd7*sacas, pv_usd8*sacas, pv_usd9*sacas,pv_usd10*sacas, pv_usd11*sacas]
+            var_usd = [var0, var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var10]
+
+            #Preços de Venda em Reais 
+            pv_brl0 = (price_dataset[0]*dolar[0]) + ((price_dataset[0]*dolar[0]) * (margem/100))
+            pv_brl1 = (price_dataset[0]*dolar[1]) + ((price_dataset[1]*dolar[1]) * (margem/100))
+            pv_brl2 = (price_dataset[0]*dolar[2]) + ((price_dataset[2]*dolar[2]) * (margem/100))
+            pv_brl3 = (price_dataset[0]*dolar[3]) + ((price_dataset[3]*dolar[3]) * (margem/100))
+            pv_brl4 = (price_dataset[0]*dolar[4]) + ((price_dataset[4]*dolar[4]) * (margem/100))
+            pv_brl5 = (price_dataset[0]*dolar[5]) + ((price_dataset[5]*dolar[5]) * (margem/100))
+            pv_brl6 = (price_dataset[0]*dolar[6]) + ((price_dataset[6]*dolar[6]) * (margem/100))
+            pv_brl7 = (price_dataset[0]*dolar[7]) + ((price_dataset[7]*dolar[7]) * (margem/100))
+            pv_brl8 = (price_dataset[0]*dolar[8]) + ((price_dataset[8]*dolar[8]) * (margem/100))
+            pv_brl9 = (price_dataset[0]*dolar[9]) + ((price_dataset[9]*dolar[9]) * (margem/100))
+            pv_brl10 = (price_dataset[0]*dolar[10]) + ((price_dataset[10]*dolar[10]) * (margem/100))
+            pv_brl11 = (price_dataset[0]*dolar[11]) + ((price_dataset[11]*dolar[11]) * (margem/100))
+
+
+            #Variação percentual dos preços em Reais 
+            var01 = 0 
+            var11 = ((pv_brl1/pv_brl0)-1)*100
+            var21 = ((pv_brl2/pv_brl1)-1)*100
+            var31 = ((pv_brl3/pv_brl2)-1)*100
+            var41 = ((pv_brl4/pv_brl3)-1)*100
+            var51 = ((pv_brl5/pv_brl4)-1)*100
+            var61 = ((pv_brl6/pv_brl5)-1)*100
+            var71 = ((pv_brl7/pv_brl6)-1)*100
+            var81 = ((pv_brl8/pv_brl7)-1)*100
+            var91 = ((pv_brl9/pv_brl8)-1)*100
+            var101 = ((pv_brl10/pv_brl9)-1)*100
+            var111 = ((pv_brl11/pv_brl10)-1)*100
+            
+            receita_brl = [pv_brl0*sacas, pv_brl1*sacas, pv_brl2*sacas, pv_brl3*sacas, pv_brl4*sacas, pv_brl5*sacas, pv_brl6*sacas, pv_brl7*sacas, pv_brl8*sacas, pv_brl9*sacas, pv_brl10*sacas, pv_brl11*sacas]
+            var_brl = [var01, var11, var21, var31, var41, var51, var61, var71, var81, var91, var101, var111]
+
+            print("Custos")
+            print("Determine o total dos custos nos ultimos 12 meses")
+            print("Custos em Reais")
+            c0 = float(input("Entre com o total de custos no mês 1: "))
+            c1 = float(input("Entre com o total de custos no mês 2: "))
+            c2 = float(input("Entre com o total de custos no mês 3: "))
+            c3 = float(input("Entre com o total de custos no mês 4: "))
+            c4 = float(input("Entre com o total de custos no mês 5: "))
+            c5 = float(input("Entre com o total de custos no mês 6: "))
+            c6 = float(input("Entre com o total de custos no mês 7: "))
+            c7 = float(input("Entre com o total de custos no mês 8: "))
+            c8 = float(input("Entre com o total de custos no mês 9: "))
+            c9 = float(input("Entre com o total de custos no mês 10: "))
+            c10 = float(input("Entre com o total de custos no mês 11: "))
+            c11 = float(input("Entre com o total de custos no mês 12: "))
+
+
+            var_custo0 = 0
+            var_custo1 = ((c1/c0)-1)*100
+            var_custo2 = ((c2/c1)-1)*100
+            var_custo3 = ((c3/c2)-1)*100
+            var_custo4 = ((c4/c3)-1)*100
+            var_custo5 = ((c5/c4)-1)*100
+            var_custo6 = ((c6/c5)-1)*100
+            var_custo7 = ((c7/c6)-1)*100
+            var_custo8 = ((c8/c7)-1)*100
+            var_custo9 = ((c9/c8)-1)*100
+            var_custo10 = ((c10/c9)-1)*100
+            var_custo11 = ((c11/c10)-1)*100
+
+            custos  = [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11]
+            var_custo_brl = [var_custo0, var_custo1, var_custo2, var_custo3, var_custo4, var_custo5, var_custo6, var_custo7, var_custo8, var_custo9, var_custo10, var_custo11]
+            
+
+
+          
+            #Valores dos custos em dólar. 
+            costs = [c0/dolar[0], c1/dolar[1], c2/dolar[2], c3/dolar[3], c4/dolar[4], c5/dolar[5], c6/dolar[6], c7/dolar[7], c8/dolar[8], c9/dolar[9], c10/dolar[10], c11/dolar[11]]
+
+            var_cost0 = 0
+            var_cost1 = (c1/dolar[1])/(c0/dolar[0])
+            var_cost2 = (c2/dolar[2])/(c1/dolar[1])
+            var_cost3 = (c2/dolar[3])/(c1/dolar[2])
+            var_cost4 = (c2/dolar[4])/(c1/dolar[3])
+            var_cost5 = (c2/dolar[5])/(c1/dolar[4])
+            var_cost6 = (c2/dolar[6])/(c1/dolar[5])
+            var_cost7 = (c2/dolar[7])/(c1/dolar[6])
+            var_cost8 = (c2/dolar[8])/(c1/dolar[7])
+            var_cost9 = (c2/dolar[9])/(c1/dolar[8])
+            var_cost10 = (c2/dolar[10])/(c1/dolar[9])
+            var_cost11 = (c2/dolar[11])/(c1/dolar[10])
+
+            var_costs_usd = [var_cost0, var_cost1, var_cost2, var_cost3, var_cost4, var_cost5, var_cost6, var_cost7, var_cost8, var_cost9, var_cost10, var_cost11]
+
+            print("Percentual dos Custos em Relação as Receitas")
+            c0_ = (c0/dolar[0])/(pv_usd0 * sacas)
+            c1_ = (c1/dolar[1])/(pv_usd0 * sacas)
+            c2_ = (c2/dolar[2])/(pv_usd0 * sacas)
+            c3_ = (c3/dolar[3])/(pv_usd0 * sacas)
+            c4_ = (c4/dolar[4])/(pv_usd0 * sacas)
+            c5_ = (c5/dolar[5])/(pv_usd0 * sacas)
+            c6_ = (c6/dolar[6])/(pv_usd0 * sacas)
+            c7_ = (c7/dolar[7])/(pv_usd0 * sacas)
+            c8_ = (c8/dolar[8])/(pv_usd0 * sacas)
+            c9_ = (c9/dolar[9])/(pv_usd0 * sacas)
+            c10_ = (c10/dolar[10])/(pv_usd0 * sacas)
+            c11_ = (c11/dolar[11])/(pv_usd0 * sacas)
+
+            percent_costs = [c0_, c1_, c2_, c3_, c4_, c5_, c6_, c7_, c8_, c9_, c10_, c11_]
+
+            total_costs_usd = sum(costs)
+            total_receita_usd = sum(receita_usd)
+            total_percent_costs = (total_costs_usd/ total_receita_usd)*100
+
+            print("Total de Custos em relação as Receitas: ", total_percent_costs)
+
+            print("Quadro comparativo entre Custos em Receitas")
+            print("Obs: Valores em Reais e em Dólar")
+
+            import pandas as pd 
+
+            atividade = {
+                "Receita_USD": [pv_usd0*sacas, pv_usd1*sacas, pv_usd2*sacas, pv_usd3*sacas, pv_usd4*sacas, pv_usd5*sacas, pv_usd6*sacas, pv_usd7*sacas, pv_usd8*sacas, pv_usd9*sacas,pv_usd10*sacas, pv_usd11*sacas],
+                "Var_USD": [var0, var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11],
+                "Receita_BRL": [pv_brl0*sacas, pv_brl1*sacas, pv_brl2*sacas, pv_brl3*sacas, pv_brl4*sacas, pv_brl5*sacas, pv_brl6*sacas, pv_brl7*sacas, pv_brl8*sacas, pv_brl9*sacas, pv_brl10*sacas, pv_brl11*sacas],
+                "Var_BRL": [var_cost0, var_cost1, var_cost2, var_cost3, var_cost4, var_cost5, var_cost6, var_cost7, var_cost8, var_cost9, var_cost10, var_cost11]
+            }
+
+            df = pd.DataFrame(atividade, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+            print(df)
+
+
+            import numpy as np 
+
+            #Receita Média da empresa em Dólar e Real.
+
+            mean_receita_usd = np.mean(receita_usd) 
+            mean_receita_brl = np.mean(receita_brl)
+
+            print("Receita Média da empresa em Dólar: ", mean_receita_usd)
+            print("Receita Média da empresa em Reais: ", mean_receita_brl)
+
+            #Custo máximo e mínimo para a atividade da empresa em Dólar e em Real.
+            mean_custos = np.mean(custos)
+            mean_costs = np.mean(costs)
+
+            std_custos = np.std(custos) 
+            std_costs = np.std(costs)
+
+            #Custos máximo e mínimo em Dólar 
+            max_costs = mean_costs + 3* std_costs
+            min_costs = mean_costs - 3* std_costs
+            print("Custo máximo das atividades em Dólar: ", max_costs)
+            print("Custo mínimo das atividades em Dólar: ", min_costs)
+
+
+            #Custos máximo e mínimo em Reais
+            max_custo = mean_custos + 3* std_custos
+            min_custo = mean_custos - 3* std_custos
+
+            print("Custo máximo das atividades em Reais: ", max_custo)
+            print("Custo mínimo das atividades em Reais: ", min_custo)
+
+
+            #Gráfico comparativo entre as Receitas e os Custos 
+            import matplotlib.pyplot as plt 
+            plt.plot(receita_usd, label = 'Receitas USD')
+            plt.plot(costs, label = 'Custos USD')
+            
+            #Adicionar rótulos e títulos ao gráfico. 
+            plt.xlabel("Índice")
+            plt.ylabel("Valores")
+            plt.title("Relação Receitas e Custos em USD")
+
+            #Adicionar uma legenda.
+            plt.legend()
+
+            #Exibir o gráfico 
+            plt.show() 
+
+
+            
+
+
+          elif provisao == 2: 
+            print("Provisão para Impostos")
+            #ICMS e Exportações (IE)
+            aliquota_icms = float(input("Defina a alíquota do ICMS: "))
+            aliquota_export = float(input("Defina a alíquota do Imposto de Exportação: "))
+            margem = float(input("Entre com a margem de lucro do produto: "))
+            sacas = int(input("Entre com o número de sacas produzidas: "))
+
+            price_dataset = [33.91,32.61,33.19,31.29,28.65,31.79,30.21,30.18,28.11,28.89,29.60,28.92]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            print("Receitas nos últimos 12 meses")
+            print("Obs: Valores em Reais (BRL)")
+
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0]*(margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1]*(margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2]*(margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3]*(margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4]*(margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5]*(margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6]*(margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7]*(margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8]*(margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9]*(margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10]*(margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11]*(margem/100)))*sacas
+
+
+            
+            valor_icms0 = (aliquota_icms/100)*receita_brl0 
+            valor_icms1 = (aliquota_icms/100)*receita_brl1
+            valor_icms2 = (aliquota_icms/100)*receita_brl2
+            valor_icms3 = (aliquota_icms/100)*receita_brl3
+            valor_icms4 = (aliquota_icms/100)*receita_brl4
+            valor_icms5 = (aliquota_icms/100)*receita_brl5
+            valor_icms6 = (aliquota_icms/100)*receita_brl6
+            valor_icms7 = (aliquota_icms/100)*receita_brl7
+            valor_icms8 = (aliquota_icms/100)*receita_brl8
+            valor_icms9 = (aliquota_icms/100)*receita_brl9
+            valor_icms10 = (aliquota_icms/100)*receita_brl10
+            valor_icms11 = (aliquota_icms/100)*receita_brl11
+
+            dataset_icms = [valor_icms0, valor_icms1, valor_icms2, valor_icms3, valor_icms4, valor_icms5, valor_icms6, valor_icms7, valor_icms8, valor_icms9, valor_icms10, valor_icms11]
+
+
+            valor_ie0 = (aliquota_export/100)*receita_brl0
+            valor_ie1 = (aliquota_export/100)*receita_brl1
+            valor_ie2 = (aliquota_export/100)*receita_brl2
+            valor_ie3 = (aliquota_export/100)*receita_brl3
+            valor_ie4 = (aliquota_export/100)*receita_brl4
+            valor_ie5 = (aliquota_export/100)*receita_brl5
+            valor_ie6 = (aliquota_export/100)*receita_brl6
+            valor_ie7 = (aliquota_export/100)*receita_brl7
+            valor_ie8 = (aliquota_export/100)*receita_brl8
+            valor_ie9 = (aliquota_export/100)*receita_brl9
+            valor_ie10 = (aliquota_export/100)*receita_brl10
+            valor_ie11 = (aliquota_export/100)*receita_brl11
+
+            dataset_ie = [valor_ie0, valor_ie1, valor_ie2, valor_ie3, valor_ie4, valor_ie5, valor_ie6, valor_ie7, valor_ie8, valor_ie9, valor_ie10, valor_ie11]
+
+            total_imposto0 = valor_icms0 + valor_ie0
+            total_imposto1 = valor_icms1 + valor_ie1
+            total_imposto2 = valor_icms2 + valor_ie2
+            total_imposto3 = valor_icms3 + valor_ie3
+            total_imposto4 = valor_icms4 + valor_ie4
+            total_imposto5 = valor_icms5 + valor_ie5
+            total_imposto6 = valor_icms6 + valor_ie6
+            total_imposto7 = valor_icms7 + valor_ie7
+            total_imposto8 = valor_icms8 + valor_ie8
+            total_imposto9 = valor_icms9 + valor_ie9
+            total_imposto10 = valor_icms10 + valor_ie10
+            total_imposto11 = valor_icms11 + valor_ie11
+
+            dataset_total_imposto = [total_imposto0, total_imposto1, total_imposto2, total_imposto3, total_imposto4, total_imposto5, total_imposto6, total_imposto7, total_imposto8, total_imposto9, total_imposto10, total_imposto11]
+
+            total_icms = sum(dataset_icms)
+            total_ie = sum(dataset_ie)
+            total_imposto = total_icms + total_ie 
+
+            print("Valor total do ICMS recolhido no período: ", total_icms)
+            print("Valor total do Imposto de Exportação (IE) recolhido no período: ", total_ie)
+            print("Valor total dos Impostos no período: ", total_imposto)
+
+            print("Analisando tendências")
+
+            import numpy as np 
+            
+            #Média dos valores dos impostos
+            mean_icms = np.mean(dataset_icms)
+            mean_ie = np.mean(dataset_ie)
+
+            print("Valor médio do ICMS pago no período: ", mean_icms)
+            print("Tendência")
+            if valor_icms11 > mean_icms: 
+              print("Tendência de queda nos valores do ICMS.")
+            else: 
+              print("Tendência de alta nos valores do ICMS.")
+
+            print("Valor médio do Imposto de Exportação no período: ", mean_ie)
+            print("Tendência")
+            if valor_ie11 > mean_ie: 
+              print("Tendência de queda nos valores do Imposto de Exportação (IE).")
+            else: 
+              print("Tendência de alta nos valores do Imposto de Exportação (IE).")
+
+            print("Tendência de Mercado")
+            if mean_icms > mean_ie: 
+              print("Valores de vendas maiores no mercado doméstico")
+            else: 
+              print("Valores de vendas maiores no mercado internacional")
+
+            #Máximo e mínimo valor dos impostos
+            std_icms = np.std(dataset_icms)
+            std_ie = np.std(dataset_ie)
+
+            max_icms = mean_icms + 3* std_icms 
+            min_icms = mean_icms - 3*std_icms 
+
+            print("Máximo valor de pagamento de ICMS no período: ", max_icms)
+            print("Mínimo valor de pagamento de ICMS no período: ", min_icms)
+
+            max_ie = mean_ie + 3* std_ie 
+            min_ie = mean_ie - 3* std_ie 
+
+            print("Máximo valor de pagamento de Imposto de Exportação (IE) no período: ", max_ie)
+            print("Mínimo valor de pagamento de Imposto de Exportação (IE) no período: ", min_ie)
+
+
+            #Gráfico comparativo entre o ICMS eo IE 
+            import matplotlib.pyplot as plt 
+            plt.plot(dataset_icms, label = 'Valores ICMS')
+            plt.plot(dataset_ie, label = 'Valores IE')
+            
+            #Adicionar rótulos e títulos ao gráfico. 
+            plt.xlabel("Índice")
+            plt.ylabel("Valores")
+            plt.title("Relação ICMS x IE")
+
+            #Adicionar uma legenda.
+            plt.legend()
+
+            #Exibir o gráfico 
+            plt.show() 
+
+
+
+
+
+
+
+
+
+          elif provisao == 3: 
+            print("Provisão de Perdas")
+            print("Produção")
+            sacas = int(input("Entre com o total de sacas produzidas no período: "))
+            perda_percent = float(input("Entre com o percentual de perda aceitável: "))
+            margem = float(input("Entre com a margem de lucro: "))
+            perda_sacas = sacas * perda_percent 
+            print("Total de unidades de produção perdidas: ", perda_sacas)
+
+
+            price_dataset = [33.91,32.61,33.19,31.29,28.65,31.79,30.21,30.18,28.11,28.89,29.60,28.92]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            
+
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0] * (margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1] * (margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2] * (margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3] * (margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4] * (margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5] * (margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6] * (margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7] * (margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8] * (margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9] * (margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10] * (margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11] * (margem/100)))*sacas
+
+            receita_brl = [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+
+            #Perda de Receita.
+            perda_receita0 = perda_percent * receita_brl[0]
+            perda_receita1 = perda_percent * receita_brl[1]
+            perda_receita2 = perda_percent * receita_brl[2]
+            perda_receita3 = perda_percent * receita_brl[3]
+            perda_receita4 = perda_percent * receita_brl[4]
+            perda_receita5 = perda_percent * receita_brl[5]
+            perda_receita6 = perda_percent * receita_brl[6]
+            perda_receita7 = perda_percent * receita_brl[7]
+            perda_receita8 = perda_percent * receita_brl[8]
+            perda_receita9 = perda_percent * receita_brl[9]
+            perda_receita10 = perda_percent * receita_brl[10]
+            perda_receita11 = perda_percent * receita_brl[11]
+
+            perda_receita = [perda_receita0, perda_receita1, perda_receita2, perda_receita3,perda_receita4,perda_receita5,perda_receita6, perda_receita7, perda_receita8, perda_receita9, perda_receita10, perda_receita11]
+
+            import pandas as pd 
+            myvar = pd.Series(perda_receita, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+
+            print(myvar)
+
+            #Perda de Receita média, máxima e mínima
+            import numpy as np 
+            mean_perda = np.mean(perda_receita)
+            std_perda = np.std(perda_receita)
+
+            max_perda = mean_perda + 3* std_perda
+            min_perda = mean_perda - 3* std_perda 
+
+            print("Perda média de Receita no período: ", mean_perda)
+            print("Tendência")
+            if perda_receita[11] > mean_perda: 
+              print("Tendência de redução de perdas no periodo")
+            else: 
+              print("Tendência de aumento de perdas no periodo")
+            
+            print("Perda máxima permitida no período: ", max_perda)
+            print("Perda mínima permitida no período: ", min_perda)
+
+            print("Evolução Gráfica das Perdas")
+
+            import matplotlib.pyplot as plt
+            plt.plot(perda_receita)
+            plt.xlabel("Período")
+            plt.ylabel("Valores")
+            plt.title("Evolução Gráfica das Perdas")
+
+            plt.show()
+
+
+
+ 
+          
+            
+
+          elif provisao == 4: 
+            print("Provisão de Lucros")
+            sacas = int(input("Entre com o total de sacas produzidas: "))
+            margem = float(input("Entre com a margem de lucro do produto: "))
+            aliquota_icms = float(input("Defina a aliquota do ICMS: "))
+            aliquota_export = float(input("Defina a aliquota do Imposto de Exportação (IE): "))
+            perda_percent = float(input("Defina o percentual de perda aceitável: "))
+
+
+            price_dataset = [33.91,32.61,33.19,31.29,28.65,31.79,30.21,30.18,28.11,28.89,29.60,28.92]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            #Receitas valores em Reais. 
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0] * (margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1] * (margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2] * (margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3] * (margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4] * (margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5] * (margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6] * (margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7] * (margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8] * (margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9] * (margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10] * (margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11] * (margem/100)))*sacas
+
+            receita_brl = [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+
+            #Custos valores em Reais
+            print("Custos")
+            print("Determine o total dos custos nos ultimos 12 meses")
+            print("Custos em Reais")
+            c0 = float(input("Entre com o total de custos no mês 1: "))
+            c1 = float(input("Entre com o total de custos no mês 2: "))
+            c2 = float(input("Entre com o total de custos no mês 3: "))
+            c3 = float(input("Entre com o total de custos no mês 4: "))
+            c4 = float(input("Entre com o total de custos no mês 5: "))
+            c5 = float(input("Entre com o total de custos no mês 6: "))
+            c6 = float(input("Entre com o total de custos no mês 7: "))
+            c7 = float(input("Entre com o total de custos no mês 8: "))
+            c8 = float(input("Entre com o total de custos no mês 9: "))
+            c9 = float(input("Entre com o total de custos no mês 10: "))
+            c10 = float(input("Entre com o total de custos no mês 11: "))
+            c11 = float(input("Entre com o total de custos no mês 12: "))
+
+            custos = [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11]
+
+            #Cálculo dos impostos. 
+            valor_icms0 = (aliquota_icms/100)*receita_brl0 
+            valor_icms1 = (aliquota_icms/100)*receita_brl1
+            valor_icms2 = (aliquota_icms/100)*receita_brl2
+            valor_icms3 = (aliquota_icms/100)*receita_brl3
+            valor_icms4 = (aliquota_icms/100)*receita_brl4
+            valor_icms5 = (aliquota_icms/100)*receita_brl5
+            valor_icms6 = (aliquota_icms/100)*receita_brl6
+            valor_icms7 = (aliquota_icms/100)*receita_brl7
+            valor_icms8 = (aliquota_icms/100)*receita_brl8
+            valor_icms9 = (aliquota_icms/100)*receita_brl9
+            valor_icms10 = (aliquota_icms/100)*receita_brl10
+            valor_icms11 = (aliquota_icms/100)*receita_brl11
+
+            dataset_icms = [valor_icms0, valor_icms1, valor_icms2, valor_icms3, valor_icms4, valor_icms5, valor_icms6, valor_icms7, valor_icms8, valor_icms9, valor_icms10, valor_icms11]
+
+
+            valor_ie0 = (aliquota_export/100)*receita_brl0
+            valor_ie1 = (aliquota_export/100)*receita_brl1
+            valor_ie2 = (aliquota_export/100)*receita_brl2
+            valor_ie3 = (aliquota_export/100)*receita_brl3
+            valor_ie4 = (aliquota_export/100)*receita_brl4
+            valor_ie5 = (aliquota_export/100)*receita_brl5
+            valor_ie6 = (aliquota_export/100)*receita_brl6
+            valor_ie7 = (aliquota_export/100)*receita_brl7
+            valor_ie8 = (aliquota_export/100)*receita_brl8
+            valor_ie9 = (aliquota_export/100)*receita_brl9
+            valor_ie10 = (aliquota_export/100)*receita_brl10
+            valor_ie11 = (aliquota_export/100)*receita_brl11
+
+            dataset_ie = [valor_ie0, valor_ie1, valor_ie2, valor_ie3, valor_ie4, valor_ie5, valor_ie6, valor_ie7, valor_ie8, valor_ie9, valor_ie10, valor_ie11]
+
+            total_imposto0 = valor_icms0 + valor_ie0
+            total_imposto1 = valor_icms1 + valor_ie1
+            total_imposto2 = valor_icms2 + valor_ie2
+            total_imposto3 = valor_icms3 + valor_ie3
+            total_imposto4 = valor_icms4 + valor_ie4
+            total_imposto5 = valor_icms5 + valor_ie5
+            total_imposto6 = valor_icms6 + valor_ie6
+            total_imposto7 = valor_icms7 + valor_ie7
+            total_imposto8 = valor_icms8 + valor_ie8
+            total_imposto9 = valor_icms9 + valor_ie9
+            total_imposto10 = valor_icms10 + valor_ie10
+            total_imposto11 = valor_icms11 + valor_ie11
+
+            dataset_total_imposto = [total_imposto0, total_imposto1, total_imposto2, total_imposto3, total_imposto4, total_imposto5, total_imposto6, total_imposto7, total_imposto8, total_imposto9, total_imposto10, total_imposto11]
+
+            perda_receita0 = (perda_percent/100) * receita_brl[0]
+            perda_receita1 = (perda_percent/100) * receita_brl[1]
+            perda_receita2 = (perda_percent/100) * receita_brl[2]
+            perda_receita3 = (perda_percent/100) * receita_brl[3]
+            perda_receita4 = (perda_percent/100) * receita_brl[4]
+            perda_receita5 = (perda_percent/100) * receita_brl[5]
+            perda_receita6 = (perda_percent/100) * receita_brl[6]
+            perda_receita7 = (perda_percent/100) * receita_brl[7]
+            perda_receita8 = (perda_percent/100) * receita_brl[8]
+            perda_receita9 = (perda_percent/100) * receita_brl[9]
+            perda_receita10 = (perda_percent/100) * receita_brl[10]
+            perda_receita11 = (perda_percent/100) * receita_brl[11]
+
+            perda_receita = [perda_receita0, perda_receita1, perda_receita2, perda_receita3,perda_receita4,perda_receita5,perda_receita6, perda_receita7, perda_receita8, perda_receita9, perda_receita10, perda_receita11]
+
+            #Lucro em Reais
+            lucro0 = receita_brl0 - custos[0] - total_imposto0 - perda_receita0
+            lucro1 = receita_brl1 - custos[1] - total_imposto1 - perda_receita1
+            lucro2 = receita_brl2 - custos[2] - total_imposto2 - perda_receita2
+            lucro3 = receita_brl3 - custos[3] - total_imposto3 - perda_receita3
+            lucro4 = receita_brl4 - custos[4] - total_imposto4 - perda_receita4
+            lucro5 = receita_brl5 - custos[5] - total_imposto5 - perda_receita5
+            lucro6 = receita_brl6 - custos[6] - total_imposto6 - perda_receita6
+            lucro7 = receita_brl7 - custos[7] - total_imposto7 - perda_receita7
+            lucro8 = receita_brl8 - custos[8] - total_imposto8 - perda_receita8
+            lucro9 = receita_brl9 - custos[9] - total_imposto9 - perda_receita9
+            lucro10 = receita_brl10 - custos[10] - total_imposto10 - perda_receita10
+            lucro11 = receita_brl11 - custos[11] - total_imposto11 - perda_receita11
+
+            lucros = [lucro0, lucro1, lucro2, lucro3, lucro4, lucro5, lucro6, lucro7, lucro8, lucro9, lucro10, lucro11]
+
+            #Métricas para lucros 
+            import numpy as np 
+            mean_lucro = np.mean(lucros)
+            print("Lucro médio do período: ", mean_lucro)
+            print("Tendência")
+            if lucros[11] > mean_lucro:
+              print("Tendência de aumento dos lucros")
+            else: 
+              print("Tendência de queda dos lucros")
+            
+            std_lucro = np.std(lucros)
+
+            max_lucros = mean_lucro + 3* std_lucro
+            min_lucros = mean_lucro - 3* std_lucro
+
+            print("Lucro máximo alcançável no período: ", max_lucros)
+            print("Lucro mínimo permitido no período: ", min_lucros)
+
+            
+            #DataFrame dos Lucros
+            atividade = {
+                "Receita": [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11],
+                "Custos": [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11],
+                "Imposto_Total": [total_imposto0, total_imposto1, total_imposto2, total_imposto3, total_imposto4, total_imposto5, total_imposto6, total_imposto7, total_imposto8, total_imposto9, total_imposto10, total_imposto11], 
+                "Perdas": [perda_receita0, perda_receita1, perda_receita2, perda_receita3,perda_receita4,perda_receita5,perda_receita6, perda_receita7, perda_receita8, perda_receita9, perda_receita10, perda_receita11], 
+                "Lucros": [lucro0, lucro1, lucro2, lucro3, lucro4, lucro5, lucro6, lucro7, lucro8, lucro9, lucro10, lucro11]
+            }
+
+            df = pd.DataFrame(atividade, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+            print(df)
+
+
+            #Evolução Gráfica dos Lucros 
+            import matplotlib.pyplot as plt 
+            plt.plot(lucros)
+            plt.title("Evolução Gráfica dos Lucros")
+            plt.xlabel("Período")
+            plt.ylabel("Valores")
+            plt.show()
+
+
+            
+
+
+
+          elif provisao == 5: 
+            print("Retorno dos Investimentos")
+            #VPL, Payback, Break Even Point
+
+            print("Fluxo de Caixa")
+            selic = float(input("Entre a taxa SELIC do período: "))
+            invest = float(input("Entre com o total de investimento no projeto: "))
+            sacas = int(input("Entre com o total de sacas produzidas no período: "))
+            margem = float(input("Entre com a margem de lucro do período: "))
+
+
+            print("Fluxo de Caixa em 12 meses")
+            price_dataset = [33.91,32.61,33.19,31.29,28.65,31.79,30.21,30.18,28.11,28.89,29.60,28.92]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0] * (margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1] * (margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2] * (margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3] * (margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4] * (margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5] * (margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6] * (margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7] * (margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8] * (margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9] * (margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10] * (margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11] * (margem/100)))*sacas
+
+            fluxo_de_caixa = [(invest*-1), receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+            receita_brl = [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+
+            print("Custos")
+            print("Determine o total dos custos nos ultimos 12 meses")
+            print("Custos em Reais")
+            c0 = float(input("Entre com o total de custos no mês 1: "))
+            c1 = float(input("Entre com o total de custos no mês 2: "))
+            c2 = float(input("Entre com o total de custos no mês 3: "))
+            c3 = float(input("Entre com o total de custos no mês 4: "))
+            c4 = float(input("Entre com o total de custos no mês 5: "))
+            c5 = float(input("Entre com o total de custos no mês 6: "))
+            c6 = float(input("Entre com o total de custos no mês 7: "))
+            c7 = float(input("Entre com o total de custos no mês 8: "))
+            c8 = float(input("Entre com o total de custos no mês 9: "))
+            c9 = float(input("Entre com o total de custos no mês 10: "))
+            c10 = float(input("Entre com o total de custos no mês 11: "))
+            c11 = float(input("Entre com o total de custos no mês 12: "))
+
+            custos = [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11]
+
+
+           
+
+
+            print("Valor Presente Líquido (VPL)")
+            vpl = sum(fluxo_de_caixa)/((1+(selic/100))**12)  #A constante 12 é referente ao período de 12 meses. 
+            print("O Valor Presente Líquido do Investimento (VPL) é: ", vpl)
+            if vpl > 0: 
+              print("O Investimento é viável.")
+            else: 
+              print("O Investimento é inviável.")
+
+            print("Payback (meses)")
+            payback = (invest*-1)/sum(receita_brl)
+            print("O Payback do projeto é: ", payback)
+
+            print("Ponto de Equilíbrio em sacas")
+            #BEP = Break Even Point. 
+
+            BEP = sum(custos)/(margem/100)
+            print("Total de sacas necessárias para alcancar o Ponto de Equilíbrio: ", BEP)
+
+    
+
+              
+
+
+        elif option == 2: 
+          print("Provisão de Resultados para o Milho")
+
+          print("Provisão de Resultados para a Soja")
+          print("Selecione um dos indicadores de atividade: ")
+          print("1 - Receitas e Custos")
+          print("2 - Impostos")
+          print("3 - Perdas")
+          print("4 - Lucros")
+          print("5 - Retorno dos Investimentos")
+          provisao = int(input("Defina a provisão a ser calculada: "))
+          if provisao == 1: 
+            print("Provisão para Receitas e Custos")
+            print("Receitas")
+            sacas = int(input("Entre com o número de sacas produzidas: "))
+            margem = float(input("Entre com a margem de lucro: "))
+
+            price_dataset = [89,87.29,79.63,65.29,53.71,53.30,55.35,53.15,58.29,60.70,69.88,71.12]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            #Preço de Venda em Dólar
+            pv_usd0 = price_dataset[0] + (price_dataset[0] * (margem/100))
+            pv_usd1 = price_dataset[1] + (price_dataset[1] * (margem/100))
+            pv_usd2 = price_dataset[2] + (price_dataset[2] * (margem/100))
+            pv_usd3 = price_dataset[3] + (price_dataset[3] * (margem/100))
+            pv_usd4 = price_dataset[4] + (price_dataset[4] * (margem/100))
+            pv_usd5 = price_dataset[5] + (price_dataset[5] * (margem/100))
+            pv_usd6 = price_dataset[6] + (price_dataset[6] * (margem/100))
+            pv_usd7 = price_dataset[7] + (price_dataset[7] * (margem/100))
+            pv_usd8 = price_dataset[8] + (price_dataset[8] * (margem/100))
+            pv_usd9 = price_dataset[9] + (price_dataset[9] * (margem/100))
+            pv_usd10 = price_dataset[10] + (price_dataset[10] * (margem/100))
+            pv_usd11 = price_dataset[11] + (price_dataset[11] * (margem/100))
+            
+            #Variação percentual dos preços em Dólar
+            var0 = 0
+            var1 = ((pv_usd2/pv_usd1)-1)*100
+            var2 = ((pv_usd3/pv_usd2)-1)*100
+            var3 = ((pv_usd4/pv_usd3)-1)*100
+            var4 = ((pv_usd5/pv_usd4)-1)*100
+            var5 = ((pv_usd6/pv_usd5)-1)*100
+            var6 = ((pv_usd7/pv_usd6)-1)*100
+            var7 = ((pv_usd8/pv_usd7)-1)*100
+            var8 = ((pv_usd9/pv_usd8)-1)*100
+            var9 = ((pv_usd10/pv_usd9)-1)*100 
+            var10 = ((pv_usd11/pv_usd10)-1)*100
+            
+
+            receita_usd = [pv_usd0*sacas, pv_usd1*sacas, pv_usd2*sacas, pv_usd3*sacas, pv_usd4*sacas, pv_usd5*sacas, pv_usd6*sacas, pv_usd7*sacas, pv_usd8*sacas, pv_usd9*sacas,pv_usd10*sacas, pv_usd11*sacas]
+            var_usd = [var0, var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var10]
+
+            #Preços de Venda em Reais 
+            pv_brl0 = (price_dataset[0]*dolar[0]) + ((price_dataset[0]*dolar[0]) * (margem/100))
+            pv_brl1 = (price_dataset[0]*dolar[1]) + ((price_dataset[1]*dolar[1]) * (margem/100))
+            pv_brl2 = (price_dataset[0]*dolar[2]) + ((price_dataset[2]*dolar[2]) * (margem/100))
+            pv_brl3 = (price_dataset[0]*dolar[3]) + ((price_dataset[3]*dolar[3]) * (margem/100))
+            pv_brl4 = (price_dataset[0]*dolar[4]) + ((price_dataset[4]*dolar[4]) * (margem/100))
+            pv_brl5 = (price_dataset[0]*dolar[5]) + ((price_dataset[5]*dolar[5]) * (margem/100))
+            pv_brl6 = (price_dataset[0]*dolar[6]) + ((price_dataset[6]*dolar[6]) * (margem/100))
+            pv_brl7 = (price_dataset[0]*dolar[7]) + ((price_dataset[7]*dolar[7]) * (margem/100))
+            pv_brl8 = (price_dataset[0]*dolar[8]) + ((price_dataset[8]*dolar[8]) * (margem/100))
+            pv_brl9 = (price_dataset[0]*dolar[9]) + ((price_dataset[9]*dolar[9]) * (margem/100))
+            pv_brl10 = (price_dataset[0]*dolar[10]) + ((price_dataset[10]*dolar[10]) * (margem/100))
+            pv_brl11 = (price_dataset[0]*dolar[11]) + ((price_dataset[11]*dolar[11]) * (margem/100))
+
+
+            #Variação percentual dos preços em Reais 
+            var01 = 0 
+            var11 = ((pv_brl1/pv_brl0)-1)*100
+            var21 = ((pv_brl2/pv_brl1)-1)*100
+            var31 = ((pv_brl3/pv_brl2)-1)*100
+            var41 = ((pv_brl4/pv_brl3)-1)*100
+            var51 = ((pv_brl5/pv_brl4)-1)*100
+            var61 = ((pv_brl6/pv_brl5)-1)*100
+            var71 = ((pv_brl7/pv_brl6)-1)*100
+            var81 = ((pv_brl8/pv_brl7)-1)*100
+            var91 = ((pv_brl9/pv_brl8)-1)*100
+            var101 = ((pv_brl10/pv_brl9)-1)*100
+            var111 = ((pv_brl11/pv_brl10)-1)*100
+            
+            receita_brl = [pv_brl0*sacas, pv_brl1*sacas, pv_brl2*sacas, pv_brl3*sacas, pv_brl4*sacas, pv_brl5*sacas, pv_brl6*sacas, pv_brl7*sacas, pv_brl8*sacas, pv_brl9*sacas, pv_brl10*sacas, pv_brl11*sacas]
+            var_brl = [var01, var11, var21, var31, var41, var51, var61, var71, var81, var91, var101, var111]
+
+            print("Custos")
+            print("Determine o total dos custos nos ultimos 12 meses")
+            print("Custos em Reais")
+            c0 = float(input("Entre com o total de custos no mês 1: "))
+            c1 = float(input("Entre com o total de custos no mês 2: "))
+            c2 = float(input("Entre com o total de custos no mês 3: "))
+            c3 = float(input("Entre com o total de custos no mês 4: "))
+            c4 = float(input("Entre com o total de custos no mês 5: "))
+            c5 = float(input("Entre com o total de custos no mês 6: "))
+            c6 = float(input("Entre com o total de custos no mês 7: "))
+            c7 = float(input("Entre com o total de custos no mês 8: "))
+            c8 = float(input("Entre com o total de custos no mês 9: "))
+            c9 = float(input("Entre com o total de custos no mês 10: "))
+            c10 = float(input("Entre com o total de custos no mês 11: "))
+            c11 = float(input("Entre com o total de custos no mês 12: "))
+
+
+            var_custo0 = 0
+            var_custo1 = ((c1/c0)-1)*100
+            var_custo2 = ((c2/c1)-1)*100
+            var_custo3 = ((c3/c2)-1)*100
+            var_custo4 = ((c4/c3)-1)*100
+            var_custo5 = ((c5/c4)-1)*100
+            var_custo6 = ((c6/c5)-1)*100
+            var_custo7 = ((c7/c6)-1)*100
+            var_custo8 = ((c8/c7)-1)*100
+            var_custo9 = ((c9/c8)-1)*100
+            var_custo10 = ((c10/c9)-1)*100
+            var_custo11 = ((c11/c10)-1)*100
+
+            custos  = [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11]
+            var_custo_brl = [var_custo0, var_custo1, var_custo2, var_custo3, var_custo4, var_custo5, var_custo6, var_custo7, var_custo8, var_custo9, var_custo10, var_custo11]
+            
+
+
+          
+            #Valores dos custos em dólar. 
+            costs = [c0/dolar[0], c1/dolar[1], c2/dolar[2], c3/dolar[3], c4/dolar[4], c5/dolar[5], c6/dolar[6], c7/dolar[7], c8/dolar[8], c9/dolar[9], c10/dolar[10], c11/dolar[11]]
+
+            var_cost0 = 0
+            var_cost1 = (c1/dolar[1])/(c0/dolar[0])
+            var_cost2 = (c2/dolar[2])/(c1/dolar[1])
+            var_cost3 = (c2/dolar[3])/(c1/dolar[2])
+            var_cost4 = (c2/dolar[4])/(c1/dolar[3])
+            var_cost5 = (c2/dolar[5])/(c1/dolar[4])
+            var_cost6 = (c2/dolar[6])/(c1/dolar[5])
+            var_cost7 = (c2/dolar[7])/(c1/dolar[6])
+            var_cost8 = (c2/dolar[8])/(c1/dolar[7])
+            var_cost9 = (c2/dolar[9])/(c1/dolar[8])
+            var_cost10 = (c2/dolar[10])/(c1/dolar[9])
+            var_cost11 = (c2/dolar[11])/(c1/dolar[10])
+
+            var_costs_usd = [var_cost0, var_cost1, var_cost2, var_cost3, var_cost4, var_cost5, var_cost6, var_cost7, var_cost8, var_cost9, var_cost10, var_cost11]
+
+            print("Percentual dos Custos em Relação as Receitas")
+            c0_ = (c0/dolar[0])/(pv_usd0 * sacas)
+            c1_ = (c1/dolar[1])/(pv_usd0 * sacas)
+            c2_ = (c2/dolar[2])/(pv_usd0 * sacas)
+            c3_ = (c3/dolar[3])/(pv_usd0 * sacas)
+            c4_ = (c4/dolar[4])/(pv_usd0 * sacas)
+            c5_ = (c5/dolar[5])/(pv_usd0 * sacas)
+            c6_ = (c6/dolar[6])/(pv_usd0 * sacas)
+            c7_ = (c7/dolar[7])/(pv_usd0 * sacas)
+            c8_ = (c8/dolar[8])/(pv_usd0 * sacas)
+            c9_ = (c9/dolar[9])/(pv_usd0 * sacas)
+            c10_ = (c10/dolar[10])/(pv_usd0 * sacas)
+            c11_ = (c11/dolar[11])/(pv_usd0 * sacas)
+
+            percent_costs = [c0_, c1_, c2_, c3_, c4_, c5_, c6_, c7_, c8_, c9_, c10_, c11_]
+
+            total_costs_usd = sum(costs)
+            total_receita_usd = sum(receita_usd)
+            total_percent_costs = (total_costs_usd/ total_receita_usd)*100
+
+            print("Total de Custos em relação as Receitas: ", total_percent_costs)
+
+            print("Quadro comparativo entre Custos em Receitas")
+            print("Obs: Valores em Reais e em Dólar")
+
+            import pandas as pd 
+
+            atividade = {
+                "Receita_USD": [pv_usd0*sacas, pv_usd1*sacas, pv_usd2*sacas, pv_usd3*sacas, pv_usd4*sacas, pv_usd5*sacas, pv_usd6*sacas, pv_usd7*sacas, pv_usd8*sacas, pv_usd9*sacas,pv_usd10*sacas, pv_usd11*sacas],
+                "Var_USD": [var0, var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11],
+                "Receita_BRL": [pv_brl0*sacas, pv_brl1*sacas, pv_brl2*sacas, pv_brl3*sacas, pv_brl4*sacas, pv_brl5*sacas, pv_brl6*sacas, pv_brl7*sacas, pv_brl8*sacas, pv_brl9*sacas, pv_brl10*sacas, pv_brl11*sacas],
+                "Var_BRL": [var_cost0, var_cost1, var_cost2, var_cost3, var_cost4, var_cost5, var_cost6, var_cost7, var_cost8, var_cost9, var_cost10, var_cost11]
+            }
+
+            df = pd.DataFrame(atividade, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+            print(df)
+
+
+            import numpy as np 
+
+            #Receita Média da empresa em Dólar e Real.
+
+            mean_receita_usd = np.mean(receita_usd) 
+            mean_receita_brl = np.mean(receita_brl)
+
+            print("Receita Média da empresa em Dólar: ", mean_receita_usd)
+            print("Receita Média da empresa em Reais: ", mean_receita_brl)
+
+            #Custo máximo e mínimo para a atividade da empresa em Dólar e em Real.
+            mean_custos = np.mean(custos)
+            mean_costs = np.mean(costs)
+
+            std_custos = np.std(custos) 
+            std_costs = np.std(costs)
+
+            #Custos máximo e mínimo em Dólar 
+            max_costs = mean_costs + 3* std_costs
+            min_costs = mean_costs - 3* std_costs
+            print("Custo máximo das atividades em Dólar: ", max_costs)
+            print("Custo mínimo das atividades em Dólar: ", min_costs)
+
+
+            #Custos máximo e mínimo em Reais
+            max_custo = mean_custos + 3* std_custos
+            min_custo = mean_custos - 3* std_custos
+
+            print("Custo máximo das atividades em Reais: ", max_custo)
+            print("Custo mínimo das atividades em Reais: ", min_custo)
+
+
+            #Gráfico comparativo entre as Receitas e os Custos 
+            import matplotlib.pyplot as plt 
+            plt.plot(receita_usd, label = 'Receitas USD')
+            plt.plot(costs, label = 'Custos USD')
+            
+            #Adicionar rótulos e títulos ao gráfico. 
+            plt.xlabel("Índice")
+            plt.ylabel("Valores")
+            plt.title("Relação Receitas e Custos em USD")
+
+            #Adicionar uma legenda.
+            plt.legend()
+
+            #Exibir o gráfico 
+            plt.show() 
+
+
+            
+
+
+          elif provisao == 2: 
+            print("Provisão para Impostos")
+            #ICMS e Exportações (IE)
+            aliquota_icms = float(input("Defina a alíquota do ICMS: "))
+            aliquota_export = float(input("Defina a alíquota do Imposto de Exportação: "))
+            margem = float(input("Entre com a margem de lucro do produto: "))
+            sacas = int(input("Entre com o número de sacas produzidas: "))
+
+            price_dataset = [89,87.29,79.63,65.29,53.71,53.30,55.35,53.15,58.29,60.70,69.88,71.12]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            print("Receitas nos últimos 12 meses")
+            print("Obs: Valores em Reais (BRL)")
+
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0]*(margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1]*(margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2]*(margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3]*(margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4]*(margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5]*(margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6]*(margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7]*(margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8]*(margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9]*(margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10]*(margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11]*(margem/100)))*sacas
+
+
+            
+            valor_icms0 = (aliquota_icms/100)*receita_brl0 
+            valor_icms1 = (aliquota_icms/100)*receita_brl1
+            valor_icms2 = (aliquota_icms/100)*receita_brl2
+            valor_icms3 = (aliquota_icms/100)*receita_brl3
+            valor_icms4 = (aliquota_icms/100)*receita_brl4
+            valor_icms5 = (aliquota_icms/100)*receita_brl5
+            valor_icms6 = (aliquota_icms/100)*receita_brl6
+            valor_icms7 = (aliquota_icms/100)*receita_brl7
+            valor_icms8 = (aliquota_icms/100)*receita_brl8
+            valor_icms9 = (aliquota_icms/100)*receita_brl9
+            valor_icms10 = (aliquota_icms/100)*receita_brl10
+            valor_icms11 = (aliquota_icms/100)*receita_brl11
+
+            dataset_icms = [valor_icms0, valor_icms1, valor_icms2, valor_icms3, valor_icms4, valor_icms5, valor_icms6, valor_icms7, valor_icms8, valor_icms9, valor_icms10, valor_icms11]
+
+
+            valor_ie0 = (aliquota_export/100)*receita_brl0
+            valor_ie1 = (aliquota_export/100)*receita_brl1
+            valor_ie2 = (aliquota_export/100)*receita_brl2
+            valor_ie3 = (aliquota_export/100)*receita_brl3
+            valor_ie4 = (aliquota_export/100)*receita_brl4
+            valor_ie5 = (aliquota_export/100)*receita_brl5
+            valor_ie6 = (aliquota_export/100)*receita_brl6
+            valor_ie7 = (aliquota_export/100)*receita_brl7
+            valor_ie8 = (aliquota_export/100)*receita_brl8
+            valor_ie9 = (aliquota_export/100)*receita_brl9
+            valor_ie10 = (aliquota_export/100)*receita_brl10
+            valor_ie11 = (aliquota_export/100)*receita_brl11
+
+            dataset_ie = [valor_ie0, valor_ie1, valor_ie2, valor_ie3, valor_ie4, valor_ie5, valor_ie6, valor_ie7, valor_ie8, valor_ie9, valor_ie10, valor_ie11]
+
+            total_imposto0 = valor_icms0 + valor_ie0
+            total_imposto1 = valor_icms1 + valor_ie1
+            total_imposto2 = valor_icms2 + valor_ie2
+            total_imposto3 = valor_icms3 + valor_ie3
+            total_imposto4 = valor_icms4 + valor_ie4
+            total_imposto5 = valor_icms5 + valor_ie5
+            total_imposto6 = valor_icms6 + valor_ie6
+            total_imposto7 = valor_icms7 + valor_ie7
+            total_imposto8 = valor_icms8 + valor_ie8
+            total_imposto9 = valor_icms9 + valor_ie9
+            total_imposto10 = valor_icms10 + valor_ie10
+            total_imposto11 = valor_icms11 + valor_ie11
+
+            dataset_total_imposto = [total_imposto0, total_imposto1, total_imposto2, total_imposto3, total_imposto4, total_imposto5, total_imposto6, total_imposto7, total_imposto8, total_imposto9, total_imposto10, total_imposto11]
+
+            total_icms = sum(dataset_icms)
+            total_ie = sum(dataset_ie)
+            total_imposto = total_icms + total_ie 
+
+            print("Valor total do ICMS recolhido no período: ", total_icms)
+            print("Valor total do Imposto de Exportação (IE) recolhido no período: ", total_ie)
+            print("Valor total dos Impostos no período: ", total_imposto)
+
+            print("Analisando tendências")
+
+            import numpy as np 
+            
+            #Média dos valores dos impostos
+            mean_icms = np.mean(dataset_icms)
+            mean_ie = np.mean(dataset_ie)
+
+            print("Valor médio do ICMS pago no período: ", mean_icms)
+            print("Tendência")
+            if valor_icms11 > mean_icms: 
+              print("Tendência de queda nos valores do ICMS.")
+            else: 
+              print("Tendência de alta nos valores do ICMS.")
+
+            print("Valor médio do Imposto de Exportação no período: ", mean_ie)
+            print("Tendência")
+            if valor_ie11 > mean_ie: 
+              print("Tendência de queda nos valores do Imposto de Exportação (IE).")
+            else: 
+              print("Tendência de alta nos valores do Imposto de Exportação (IE).")
+
+            print("Tendência de Mercado")
+            if mean_icms > mean_ie: 
+              print("Valores de vendas maiores no mercado doméstico")
+            else: 
+              print("Valores de vendas maiores no mercado internacional")
+
+            #Máximo e mínimo valor dos impostos
+            std_icms = np.std(dataset_icms)
+            std_ie = np.std(dataset_ie)
+
+            max_icms = mean_icms + 3* std_icms 
+            min_icms = mean_icms - 3*std_icms 
+
+            print("Máximo valor de pagamento de ICMS no período: ", max_icms)
+            print("Mínimo valor de pagamento de ICMS no período: ", min_icms)
+
+            max_ie = mean_ie + 3* std_ie 
+            min_ie = mean_ie - 3* std_ie 
+
+            print("Máximo valor de pagamento de Imposto de Exportação (IE) no período: ", max_ie)
+            print("Mínimo valor de pagamento de Imposto de Exportação (IE) no período: ", min_ie)
+
+
+            #Gráfico comparativo entre o ICMS eo IE 
+            import matplotlib.pyplot as plt 
+            plt.plot(dataset_icms, label = 'Valores ICMS')
+            plt.plot(dataset_ie, label = 'Valores IE')
+            
+            #Adicionar rótulos e títulos ao gráfico. 
+            plt.xlabel("Índice")
+            plt.ylabel("Valores")
+            plt.title("Relação ICMS x IE")
+
+            #Adicionar uma legenda.
+            plt.legend()
+
+            #Exibir o gráfico 
+            plt.show() 
+
+
+
+
+
+
+
+
+
+          elif provisao == 3: 
+            print("Provisão de Perdas")
+            print("Produção")
+            sacas = int(input("Entre com o total de sacas produzidas no período: "))
+            perda_percent = float(input("Entre com o percentual de perda aceitável: "))
+            margem = float(input("Entre com a margem de lucro: "))
+            perda_sacas = sacas * perda_percent 
+            print("Total de unidades de produção perdidas: ", perda_sacas)
+
+
+            price_dataset = [89,87.29,79.63,65.29,53.71,53.30,55.35,53.15,58.29,60.70,69.88,71.12]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            
+
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0] * (margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1] * (margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2] * (margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3] * (margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4] * (margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5] * (margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6] * (margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7] * (margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8] * (margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9] * (margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10] * (margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11] * (margem/100)))*sacas
+
+            receita_brl = [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+
+            #Perda de Receita.
+            perda_receita0 = perda_percent * receita_brl[0]
+            perda_receita1 = perda_percent * receita_brl[1]
+            perda_receita2 = perda_percent * receita_brl[2]
+            perda_receita3 = perda_percent * receita_brl[3]
+            perda_receita4 = perda_percent * receita_brl[4]
+            perda_receita5 = perda_percent * receita_brl[5]
+            perda_receita6 = perda_percent * receita_brl[6]
+            perda_receita7 = perda_percent * receita_brl[7]
+            perda_receita8 = perda_percent * receita_brl[8]
+            perda_receita9 = perda_percent * receita_brl[9]
+            perda_receita10 = perda_percent * receita_brl[10]
+            perda_receita11 = perda_percent * receita_brl[11]
+
+            perda_receita = [perda_receita0, perda_receita1, perda_receita2, perda_receita3,perda_receita4,perda_receita5,perda_receita6, perda_receita7, perda_receita8, perda_receita9, perda_receita10, perda_receita11]
+
+            import pandas as pd 
+            myvar = pd.Series(perda_receita, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+
+            print(myvar)
+
+            #Perda de Receita média, máxima e mínima
+            import numpy as np 
+            mean_perda = np.mean(perda_receita)
+            std_perda = np.std(perda_receita)
+
+            max_perda = mean_perda + 3* std_perda
+            min_perda = mean_perda - 3* std_perda 
+
+            print("Perda média de Receita no período: ", mean_perda)
+            print("Tendência")
+            if perda_receita[11] > mean_perda: 
+              print("Tendência de redução de perdas no periodo")
+            else: 
+              print("Tendência de aumento de perdas no periodo")
+            
+            print("Perda máxima permitida no período: ", max_perda)
+            print("Perda mínima permitida no período: ", min_perda)
+
+            print("Evolução Gráfica das Perdas")
+
+            import matplotlib.pyplot as plt
+            plt.plot(perda_receita)
+            plt.xlabel("Período")
+            plt.ylabel("Valores")
+            plt.title("Evolução Gráfica das Perdas")
+
+            plt.show()
+
+
+
+ 
+          
+            
+
+          elif provisao == 4: 
+            print("Provisão de Lucros")
+            sacas = int(input("Entre com o total de sacas produzidas: "))
+            margem = float(input("Entre com a margem de lucro do produto: "))
+            aliquota_icms = float(input("Defina a aliquota do ICMS: "))
+            aliquota_export = float(input("Defina a aliquota do Imposto de Exportação (IE): "))
+            perda_percent = float(input("Defina o percentual de perda aceitável: "))
+
+
+            price_dataset = [89,87.29,79.63,65.29,53.71,53.30,55.35,53.15,58.29,60.70,69.88,71.12]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            #Receitas valores em Reais. 
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0] * (margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1] * (margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2] * (margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3] * (margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4] * (margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5] * (margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6] * (margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7] * (margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8] * (margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9] * (margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10] * (margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11] * (margem/100)))*sacas
+
+            receita_brl = [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+
+            #Custos valores em Reais
+            print("Custos")
+            print("Determine o total dos custos nos ultimos 12 meses")
+            print("Custos em Reais")
+            c0 = float(input("Entre com o total de custos no mês 1: "))
+            c1 = float(input("Entre com o total de custos no mês 2: "))
+            c2 = float(input("Entre com o total de custos no mês 3: "))
+            c3 = float(input("Entre com o total de custos no mês 4: "))
+            c4 = float(input("Entre com o total de custos no mês 5: "))
+            c5 = float(input("Entre com o total de custos no mês 6: "))
+            c6 = float(input("Entre com o total de custos no mês 7: "))
+            c7 = float(input("Entre com o total de custos no mês 8: "))
+            c8 = float(input("Entre com o total de custos no mês 9: "))
+            c9 = float(input("Entre com o total de custos no mês 10: "))
+            c10 = float(input("Entre com o total de custos no mês 11: "))
+            c11 = float(input("Entre com o total de custos no mês 12: "))
+
+            custos = [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11]
+
+            #Cálculo dos impostos. 
+            valor_icms0 = (aliquota_icms/100)*receita_brl0 
+            valor_icms1 = (aliquota_icms/100)*receita_brl1
+            valor_icms2 = (aliquota_icms/100)*receita_brl2
+            valor_icms3 = (aliquota_icms/100)*receita_brl3
+            valor_icms4 = (aliquota_icms/100)*receita_brl4
+            valor_icms5 = (aliquota_icms/100)*receita_brl5
+            valor_icms6 = (aliquota_icms/100)*receita_brl6
+            valor_icms7 = (aliquota_icms/100)*receita_brl7
+            valor_icms8 = (aliquota_icms/100)*receita_brl8
+            valor_icms9 = (aliquota_icms/100)*receita_brl9
+            valor_icms10 = (aliquota_icms/100)*receita_brl10
+            valor_icms11 = (aliquota_icms/100)*receita_brl11
+
+            dataset_icms = [valor_icms0, valor_icms1, valor_icms2, valor_icms3, valor_icms4, valor_icms5, valor_icms6, valor_icms7, valor_icms8, valor_icms9, valor_icms10, valor_icms11]
+
+
+            valor_ie0 = (aliquota_export/100)*receita_brl0
+            valor_ie1 = (aliquota_export/100)*receita_brl1
+            valor_ie2 = (aliquota_export/100)*receita_brl2
+            valor_ie3 = (aliquota_export/100)*receita_brl3
+            valor_ie4 = (aliquota_export/100)*receita_brl4
+            valor_ie5 = (aliquota_export/100)*receita_brl5
+            valor_ie6 = (aliquota_export/100)*receita_brl6
+            valor_ie7 = (aliquota_export/100)*receita_brl7
+            valor_ie8 = (aliquota_export/100)*receita_brl8
+            valor_ie9 = (aliquota_export/100)*receita_brl9
+            valor_ie10 = (aliquota_export/100)*receita_brl10
+            valor_ie11 = (aliquota_export/100)*receita_brl11
+
+            dataset_ie = [valor_ie0, valor_ie1, valor_ie2, valor_ie3, valor_ie4, valor_ie5, valor_ie6, valor_ie7, valor_ie8, valor_ie9, valor_ie10, valor_ie11]
+
+            total_imposto0 = valor_icms0 + valor_ie0
+            total_imposto1 = valor_icms1 + valor_ie1
+            total_imposto2 = valor_icms2 + valor_ie2
+            total_imposto3 = valor_icms3 + valor_ie3
+            total_imposto4 = valor_icms4 + valor_ie4
+            total_imposto5 = valor_icms5 + valor_ie5
+            total_imposto6 = valor_icms6 + valor_ie6
+            total_imposto7 = valor_icms7 + valor_ie7
+            total_imposto8 = valor_icms8 + valor_ie8
+            total_imposto9 = valor_icms9 + valor_ie9
+            total_imposto10 = valor_icms10 + valor_ie10
+            total_imposto11 = valor_icms11 + valor_ie11
+
+            dataset_total_imposto = [total_imposto0, total_imposto1, total_imposto2, total_imposto3, total_imposto4, total_imposto5, total_imposto6, total_imposto7, total_imposto8, total_imposto9, total_imposto10, total_imposto11]
+
+            perda_receita0 = (perda_percent/100) * receita_brl[0]
+            perda_receita1 = (perda_percent/100) * receita_brl[1]
+            perda_receita2 = (perda_percent/100) * receita_brl[2]
+            perda_receita3 = (perda_percent/100) * receita_brl[3]
+            perda_receita4 = (perda_percent/100) * receita_brl[4]
+            perda_receita5 = (perda_percent/100) * receita_brl[5]
+            perda_receita6 = (perda_percent/100) * receita_brl[6]
+            perda_receita7 = (perda_percent/100) * receita_brl[7]
+            perda_receita8 = (perda_percent/100) * receita_brl[8]
+            perda_receita9 = (perda_percent/100) * receita_brl[9]
+            perda_receita10 = (perda_percent/100) * receita_brl[10]
+            perda_receita11 = (perda_percent/100) * receita_brl[11]
+
+            perda_receita = [perda_receita0, perda_receita1, perda_receita2, perda_receita3,perda_receita4,perda_receita5,perda_receita6, perda_receita7, perda_receita8, perda_receita9, perda_receita10, perda_receita11]
+
+            #Lucro em Reais
+            lucro0 = receita_brl0 - custos[0] - total_imposto0 - perda_receita0
+            lucro1 = receita_brl1 - custos[1] - total_imposto1 - perda_receita1
+            lucro2 = receita_brl2 - custos[2] - total_imposto2 - perda_receita2
+            lucro3 = receita_brl3 - custos[3] - total_imposto3 - perda_receita3
+            lucro4 = receita_brl4 - custos[4] - total_imposto4 - perda_receita4
+            lucro5 = receita_brl5 - custos[5] - total_imposto5 - perda_receita5
+            lucro6 = receita_brl6 - custos[6] - total_imposto6 - perda_receita6
+            lucro7 = receita_brl7 - custos[7] - total_imposto7 - perda_receita7
+            lucro8 = receita_brl8 - custos[8] - total_imposto8 - perda_receita8
+            lucro9 = receita_brl9 - custos[9] - total_imposto9 - perda_receita9
+            lucro10 = receita_brl10 - custos[10] - total_imposto10 - perda_receita10
+            lucro11 = receita_brl11 - custos[11] - total_imposto11 - perda_receita11
+
+            lucros = [lucro0, lucro1, lucro2, lucro3, lucro4, lucro5, lucro6, lucro7, lucro8, lucro9, lucro10, lucro11]
+
+            #Métricas para lucros 
+            import numpy as np 
+            mean_lucro = np.mean(lucros)
+            print("Lucro médio do período: ", mean_lucro)
+            print("Tendência")
+            if lucros[11] > mean_lucro:
+              print("Tendência de aumento dos lucros")
+            else: 
+              print("Tendência de queda dos lucros")
+            
+            std_lucro = np.std(lucros)
+
+            max_lucros = mean_lucro + 3* std_lucro
+            min_lucros = mean_lucro - 3* std_lucro
+
+            print("Lucro máximo alcançável no período: ", max_lucros)
+            print("Lucro mínimo permitido no período: ", min_lucros)
+
+            
+            #DataFrame dos Lucros
+            atividade = {
+                "Receita": [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11],
+                "Custos": [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11],
+                "Imposto_Total": [total_imposto0, total_imposto1, total_imposto2, total_imposto3, total_imposto4, total_imposto5, total_imposto6, total_imposto7, total_imposto8, total_imposto9, total_imposto10, total_imposto11], 
+                "Perdas": [perda_receita0, perda_receita1, perda_receita2, perda_receita3,perda_receita4,perda_receita5,perda_receita6, perda_receita7, perda_receita8, perda_receita9, perda_receita10, perda_receita11], 
+                "Lucros": [lucro0, lucro1, lucro2, lucro3, lucro4, lucro5, lucro6, lucro7, lucro8, lucro9, lucro10, lucro11]
+            }
+
+            df = pd.DataFrame(atividade, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+            print(df)
+
+
+            #Evolução Gráfica dos Lucros 
+            import matplotlib.pyplot as plt 
+            plt.plot(lucros)
+            plt.title("Evolução Gráfica dos Lucros")
+            plt.xlabel("Período")
+            plt.ylabel("Valores")
+            plt.show()
+
+
+            
+
+
+
+          elif provisao == 5: 
+            print("Retorno dos Investimentos")
+            #VPL, Payback, Break Even Point
+
+            print("Fluxo de Caixa")
+            selic = float(input("Entre a taxa SELIC do período: "))
+            invest = float(input("Entre com o total de investimento no projeto: "))
+            sacas = int(input("Entre com o total de sacas produzidas no período: "))
+            margem = float(input("Entre com a margem de lucro do período: "))
+
+
+            print("Fluxo de Caixa em 12 meses")
+            price_dataset = [89,87.29,79.63,65.29,53.71,53.30,55.35,53.15,58.29,60.70,69.88,71.12]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0] * (margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1] * (margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2] * (margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3] * (margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4] * (margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5] * (margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6] * (margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7] * (margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8] * (margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9] * (margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10] * (margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11] * (margem/100)))*sacas
+
+            fluxo_de_caixa = [(invest*-1), receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+            receita_brl = [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+
+            print("Custos")
+            print("Determine o total dos custos nos ultimos 12 meses")
+            print("Custos em Reais")
+            c0 = float(input("Entre com o total de custos no mês 1: "))
+            c1 = float(input("Entre com o total de custos no mês 2: "))
+            c2 = float(input("Entre com o total de custos no mês 3: "))
+            c3 = float(input("Entre com o total de custos no mês 4: "))
+            c4 = float(input("Entre com o total de custos no mês 5: "))
+            c5 = float(input("Entre com o total de custos no mês 6: "))
+            c6 = float(input("Entre com o total de custos no mês 7: "))
+            c7 = float(input("Entre com o total de custos no mês 8: "))
+            c8 = float(input("Entre com o total de custos no mês 9: "))
+            c9 = float(input("Entre com o total de custos no mês 10: "))
+            c10 = float(input("Entre com o total de custos no mês 11: "))
+            c11 = float(input("Entre com o total de custos no mês 12: "))
+
+            custos = [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11]
+
+
+           
+
+
+            print("Valor Presente Líquido (VPL)")
+            vpl = sum(fluxo_de_caixa)/((1+(selic/100))**12)  #A constante 12 é referente ao período de 12 meses. 
+            print("O Valor Presente Líquido do Investimento (VPL) é: ", vpl)
+            if vpl > 0: 
+              print("O Investimento é viável.")
+            else: 
+              print("O Investimento é inviável.")
+
+            print("Payback (meses)")
+            payback = (invest*-1)/sum(receita_brl)
+            print("O Payback do projeto é: ", payback)
+
+            print("Ponto de Equilíbrio em sacas")
+            #BEP = Break Even Point. 
+
+            BEP = sum(custos)/(margem/100)
+            print("Total de sacas necessárias para alcancar o Ponto de Equilíbrio: ", BEP)
+
+
+
+
+
+
+
+        elif option == 3: 
+          print("Provisão de Resultados para o Boi Gordo")
+          
+
+          print("Selecione um dos indicadores de atividade: ")
+          print("1 - Receitas e Custos")
+          print("2 - Impostos")
+          print("3 - Perdas")
+          print("4 - Lucros")
+          print("5 - Retorno dos Investimentos")
+          provisao = int(input("Defina a provisão a ser calculada: "))
+          if provisao == 1: 
+            print("Provisão para Receitas e Custos")
+            print("Receitas")
+            sacas = int(input("Entre com o número de sacas produzidas: "))
+            margem = float(input("Entre com a margem de lucro: "))
+
+            price_dataset = [298.40,295.90,291.55,263.95,236.75,263.25, 232.30,195.10,240.60,235.45,248.90,247.75]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            #Preço de Venda em Dólar
+            pv_usd0 = price_dataset[0] + (price_dataset[0] * (margem/100))
+            pv_usd1 = price_dataset[1] + (price_dataset[1] * (margem/100))
+            pv_usd2 = price_dataset[2] + (price_dataset[2] * (margem/100))
+            pv_usd3 = price_dataset[3] + (price_dataset[3] * (margem/100))
+            pv_usd4 = price_dataset[4] + (price_dataset[4] * (margem/100))
+            pv_usd5 = price_dataset[5] + (price_dataset[5] * (margem/100))
+            pv_usd6 = price_dataset[6] + (price_dataset[6] * (margem/100))
+            pv_usd7 = price_dataset[7] + (price_dataset[7] * (margem/100))
+            pv_usd8 = price_dataset[8] + (price_dataset[8] * (margem/100))
+            pv_usd9 = price_dataset[9] + (price_dataset[9] * (margem/100))
+            pv_usd10 = price_dataset[10] + (price_dataset[10] * (margem/100))
+            pv_usd11 = price_dataset[11] + (price_dataset[11] * (margem/100))
+            
+            #Variação percentual dos preços em Dólar
+            var0 = 0
+            var1 = ((pv_usd2/pv_usd1)-1)*100
+            var2 = ((pv_usd3/pv_usd2)-1)*100
+            var3 = ((pv_usd4/pv_usd3)-1)*100
+            var4 = ((pv_usd5/pv_usd4)-1)*100
+            var5 = ((pv_usd6/pv_usd5)-1)*100
+            var6 = ((pv_usd7/pv_usd6)-1)*100
+            var7 = ((pv_usd8/pv_usd7)-1)*100
+            var8 = ((pv_usd9/pv_usd8)-1)*100
+            var9 = ((pv_usd10/pv_usd9)-1)*100 
+            var10 = ((pv_usd11/pv_usd10)-1)*100
+            
+
+            receita_usd = [pv_usd0*sacas, pv_usd1*sacas, pv_usd2*sacas, pv_usd3*sacas, pv_usd4*sacas, pv_usd5*sacas, pv_usd6*sacas, pv_usd7*sacas, pv_usd8*sacas, pv_usd9*sacas,pv_usd10*sacas, pv_usd11*sacas]
+            var_usd = [var0, var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var10]
+
+            #Preços de Venda em Reais 
+            pv_brl0 = (price_dataset[0]*dolar[0]) + ((price_dataset[0]*dolar[0]) * (margem/100))
+            pv_brl1 = (price_dataset[0]*dolar[1]) + ((price_dataset[1]*dolar[1]) * (margem/100))
+            pv_brl2 = (price_dataset[0]*dolar[2]) + ((price_dataset[2]*dolar[2]) * (margem/100))
+            pv_brl3 = (price_dataset[0]*dolar[3]) + ((price_dataset[3]*dolar[3]) * (margem/100))
+            pv_brl4 = (price_dataset[0]*dolar[4]) + ((price_dataset[4]*dolar[4]) * (margem/100))
+            pv_brl5 = (price_dataset[0]*dolar[5]) + ((price_dataset[5]*dolar[5]) * (margem/100))
+            pv_brl6 = (price_dataset[0]*dolar[6]) + ((price_dataset[6]*dolar[6]) * (margem/100))
+            pv_brl7 = (price_dataset[0]*dolar[7]) + ((price_dataset[7]*dolar[7]) * (margem/100))
+            pv_brl8 = (price_dataset[0]*dolar[8]) + ((price_dataset[8]*dolar[8]) * (margem/100))
+            pv_brl9 = (price_dataset[0]*dolar[9]) + ((price_dataset[9]*dolar[9]) * (margem/100))
+            pv_brl10 = (price_dataset[0]*dolar[10]) + ((price_dataset[10]*dolar[10]) * (margem/100))
+            pv_brl11 = (price_dataset[0]*dolar[11]) + ((price_dataset[11]*dolar[11]) * (margem/100))
+
+
+            #Variação percentual dos preços em Reais 
+            var01 = 0 
+            var11 = ((pv_brl1/pv_brl0)-1)*100
+            var21 = ((pv_brl2/pv_brl1)-1)*100
+            var31 = ((pv_brl3/pv_brl2)-1)*100
+            var41 = ((pv_brl4/pv_brl3)-1)*100
+            var51 = ((pv_brl5/pv_brl4)-1)*100
+            var61 = ((pv_brl6/pv_brl5)-1)*100
+            var71 = ((pv_brl7/pv_brl6)-1)*100
+            var81 = ((pv_brl8/pv_brl7)-1)*100
+            var91 = ((pv_brl9/pv_brl8)-1)*100
+            var101 = ((pv_brl10/pv_brl9)-1)*100
+            var111 = ((pv_brl11/pv_brl10)-1)*100
+            
+            receita_brl = [pv_brl0*sacas, pv_brl1*sacas, pv_brl2*sacas, pv_brl3*sacas, pv_brl4*sacas, pv_brl5*sacas, pv_brl6*sacas, pv_brl7*sacas, pv_brl8*sacas, pv_brl9*sacas, pv_brl10*sacas, pv_brl11*sacas]
+            var_brl = [var01, var11, var21, var31, var41, var51, var61, var71, var81, var91, var101, var111]
+
+            print("Custos")
+            print("Determine o total dos custos nos ultimos 12 meses")
+            print("Custos em Reais")
+            c0 = float(input("Entre com o total de custos no mês 1: "))
+            c1 = float(input("Entre com o total de custos no mês 2: "))
+            c2 = float(input("Entre com o total de custos no mês 3: "))
+            c3 = float(input("Entre com o total de custos no mês 4: "))
+            c4 = float(input("Entre com o total de custos no mês 5: "))
+            c5 = float(input("Entre com o total de custos no mês 6: "))
+            c6 = float(input("Entre com o total de custos no mês 7: "))
+            c7 = float(input("Entre com o total de custos no mês 8: "))
+            c8 = float(input("Entre com o total de custos no mês 9: "))
+            c9 = float(input("Entre com o total de custos no mês 10: "))
+            c10 = float(input("Entre com o total de custos no mês 11: "))
+            c11 = float(input("Entre com o total de custos no mês 12: "))
+
+
+            var_custo0 = 0
+            var_custo1 = ((c1/c0)-1)*100
+            var_custo2 = ((c2/c1)-1)*100
+            var_custo3 = ((c3/c2)-1)*100
+            var_custo4 = ((c4/c3)-1)*100
+            var_custo5 = ((c5/c4)-1)*100
+            var_custo6 = ((c6/c5)-1)*100
+            var_custo7 = ((c7/c6)-1)*100
+            var_custo8 = ((c8/c7)-1)*100
+            var_custo9 = ((c9/c8)-1)*100
+            var_custo10 = ((c10/c9)-1)*100
+            var_custo11 = ((c11/c10)-1)*100
+
+            custos  = [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11]
+            var_custo_brl = [var_custo0, var_custo1, var_custo2, var_custo3, var_custo4, var_custo5, var_custo6, var_custo7, var_custo8, var_custo9, var_custo10, var_custo11]
+            
+
+
+          
+            #Valores dos custos em dólar. 
+            costs = [c0/dolar[0], c1/dolar[1], c2/dolar[2], c3/dolar[3], c4/dolar[4], c5/dolar[5], c6/dolar[6], c7/dolar[7], c8/dolar[8], c9/dolar[9], c10/dolar[10], c11/dolar[11]]
+
+            var_cost0 = 0
+            var_cost1 = (c1/dolar[1])/(c0/dolar[0])
+            var_cost2 = (c2/dolar[2])/(c1/dolar[1])
+            var_cost3 = (c2/dolar[3])/(c1/dolar[2])
+            var_cost4 = (c2/dolar[4])/(c1/dolar[3])
+            var_cost5 = (c2/dolar[5])/(c1/dolar[4])
+            var_cost6 = (c2/dolar[6])/(c1/dolar[5])
+            var_cost7 = (c2/dolar[7])/(c1/dolar[6])
+            var_cost8 = (c2/dolar[8])/(c1/dolar[7])
+            var_cost9 = (c2/dolar[9])/(c1/dolar[8])
+            var_cost10 = (c2/dolar[10])/(c1/dolar[9])
+            var_cost11 = (c2/dolar[11])/(c1/dolar[10])
+
+            var_costs_usd = [var_cost0, var_cost1, var_cost2, var_cost3, var_cost4, var_cost5, var_cost6, var_cost7, var_cost8, var_cost9, var_cost10, var_cost11]
+
+            print("Percentual dos Custos em Relação as Receitas")
+            c0_ = (c0/dolar[0])/(pv_usd0 * sacas)
+            c1_ = (c1/dolar[1])/(pv_usd0 * sacas)
+            c2_ = (c2/dolar[2])/(pv_usd0 * sacas)
+            c3_ = (c3/dolar[3])/(pv_usd0 * sacas)
+            c4_ = (c4/dolar[4])/(pv_usd0 * sacas)
+            c5_ = (c5/dolar[5])/(pv_usd0 * sacas)
+            c6_ = (c6/dolar[6])/(pv_usd0 * sacas)
+            c7_ = (c7/dolar[7])/(pv_usd0 * sacas)
+            c8_ = (c8/dolar[8])/(pv_usd0 * sacas)
+            c9_ = (c9/dolar[9])/(pv_usd0 * sacas)
+            c10_ = (c10/dolar[10])/(pv_usd0 * sacas)
+            c11_ = (c11/dolar[11])/(pv_usd0 * sacas)
+
+            percent_costs = [c0_, c1_, c2_, c3_, c4_, c5_, c6_, c7_, c8_, c9_, c10_, c11_]
+
+            total_costs_usd = sum(costs)
+            total_receita_usd = sum(receita_usd)
+            total_percent_costs = (total_costs_usd/ total_receita_usd)*100
+
+            print("Total de Custos em relação as Receitas: ", total_percent_costs)
+
+            print("Quadro comparativo entre Custos em Receitas")
+            print("Obs: Valores em Reais e em Dólar")
+
+            import pandas as pd 
+
+            atividade = {
+                "Receita_USD": [pv_usd0*sacas, pv_usd1*sacas, pv_usd2*sacas, pv_usd3*sacas, pv_usd4*sacas, pv_usd5*sacas, pv_usd6*sacas, pv_usd7*sacas, pv_usd8*sacas, pv_usd9*sacas,pv_usd10*sacas, pv_usd11*sacas],
+                "Var_USD": [var0, var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11],
+                "Receita_BRL": [pv_brl0*sacas, pv_brl1*sacas, pv_brl2*sacas, pv_brl3*sacas, pv_brl4*sacas, pv_brl5*sacas, pv_brl6*sacas, pv_brl7*sacas, pv_brl8*sacas, pv_brl9*sacas, pv_brl10*sacas, pv_brl11*sacas],
+                "Var_BRL": [var_cost0, var_cost1, var_cost2, var_cost3, var_cost4, var_cost5, var_cost6, var_cost7, var_cost8, var_cost9, var_cost10, var_cost11]
+            }
+
+            df = pd.DataFrame(atividade, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+            print(df)
+
+
+            import numpy as np 
+
+            #Receita Média da empresa em Dólar e Real.
+
+            mean_receita_usd = np.mean(receita_usd) 
+            mean_receita_brl = np.mean(receita_brl)
+
+            print("Receita Média da empresa em Dólar: ", mean_receita_usd)
+            print("Receita Média da empresa em Reais: ", mean_receita_brl)
+
+            #Custo máximo e mínimo para a atividade da empresa em Dólar e em Real.
+            mean_custos = np.mean(custos)
+            mean_costs = np.mean(costs)
+
+            std_custos = np.std(custos) 
+            std_costs = np.std(costs)
+
+            #Custos máximo e mínimo em Dólar 
+            max_costs = mean_costs + 3* std_costs
+            min_costs = mean_costs - 3* std_costs
+            print("Custo máximo das atividades em Dólar: ", max_costs)
+            print("Custo mínimo das atividades em Dólar: ", min_costs)
+
+
+            #Custos máximo e mínimo em Reais
+            max_custo = mean_custos + 3* std_custos
+            min_custo = mean_custos - 3* std_custos
+
+            print("Custo máximo das atividades em Reais: ", max_custo)
+            print("Custo mínimo das atividades em Reais: ", min_custo)
+
+
+            #Gráfico comparativo entre as Receitas e os Custos 
+            import matplotlib.pyplot as plt 
+            plt.plot(receita_usd, label = 'Receitas USD')
+            plt.plot(costs, label = 'Custos USD')
+            
+            #Adicionar rótulos e títulos ao gráfico. 
+            plt.xlabel("Índice")
+            plt.ylabel("Valores")
+            plt.title("Relação Receitas e Custos em USD")
+
+            #Adicionar uma legenda.
+            plt.legend()
+
+            #Exibir o gráfico 
+            plt.show() 
+
+
+            
+
+
+          elif provisao == 2: 
+            print("Provisão para Impostos")
+            #ICMS e Exportações (IE)
+            aliquota_icms = float(input("Defina a alíquota do ICMS: "))
+            aliquota_export = float(input("Defina a alíquota do Imposto de Exportação: "))
+            margem = float(input("Entre com a margem de lucro do produto: "))
+            sacas = int(input("Entre com o número de sacas produzidas: "))
+
+            price_dataset = [298.40,295.90,291.55,263.95,236.75,263.25, 232.30,195.10,240.60,235.45,248.90,247.75]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            print("Receitas nos últimos 12 meses")
+            print("Obs: Valores em Reais (BRL)")
+
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0]*(margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1]*(margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2]*(margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3]*(margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4]*(margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5]*(margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6]*(margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7]*(margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8]*(margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9]*(margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10]*(margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11]*(margem/100)))*sacas
+
+
+            
+            valor_icms0 = (aliquota_icms/100)*receita_brl0 
+            valor_icms1 = (aliquota_icms/100)*receita_brl1
+            valor_icms2 = (aliquota_icms/100)*receita_brl2
+            valor_icms3 = (aliquota_icms/100)*receita_brl3
+            valor_icms4 = (aliquota_icms/100)*receita_brl4
+            valor_icms5 = (aliquota_icms/100)*receita_brl5
+            valor_icms6 = (aliquota_icms/100)*receita_brl6
+            valor_icms7 = (aliquota_icms/100)*receita_brl7
+            valor_icms8 = (aliquota_icms/100)*receita_brl8
+            valor_icms9 = (aliquota_icms/100)*receita_brl9
+            valor_icms10 = (aliquota_icms/100)*receita_brl10
+            valor_icms11 = (aliquota_icms/100)*receita_brl11
+
+            dataset_icms = [valor_icms0, valor_icms1, valor_icms2, valor_icms3, valor_icms4, valor_icms5, valor_icms6, valor_icms7, valor_icms8, valor_icms9, valor_icms10, valor_icms11]
+
+
+            valor_ie0 = (aliquota_export/100)*receita_brl0
+            valor_ie1 = (aliquota_export/100)*receita_brl1
+            valor_ie2 = (aliquota_export/100)*receita_brl2
+            valor_ie3 = (aliquota_export/100)*receita_brl3
+            valor_ie4 = (aliquota_export/100)*receita_brl4
+            valor_ie5 = (aliquota_export/100)*receita_brl5
+            valor_ie6 = (aliquota_export/100)*receita_brl6
+            valor_ie7 = (aliquota_export/100)*receita_brl7
+            valor_ie8 = (aliquota_export/100)*receita_brl8
+            valor_ie9 = (aliquota_export/100)*receita_brl9
+            valor_ie10 = (aliquota_export/100)*receita_brl10
+            valor_ie11 = (aliquota_export/100)*receita_brl11
+
+            dataset_ie = [valor_ie0, valor_ie1, valor_ie2, valor_ie3, valor_ie4, valor_ie5, valor_ie6, valor_ie7, valor_ie8, valor_ie9, valor_ie10, valor_ie11]
+
+            total_imposto0 = valor_icms0 + valor_ie0
+            total_imposto1 = valor_icms1 + valor_ie1
+            total_imposto2 = valor_icms2 + valor_ie2
+            total_imposto3 = valor_icms3 + valor_ie3
+            total_imposto4 = valor_icms4 + valor_ie4
+            total_imposto5 = valor_icms5 + valor_ie5
+            total_imposto6 = valor_icms6 + valor_ie6
+            total_imposto7 = valor_icms7 + valor_ie7
+            total_imposto8 = valor_icms8 + valor_ie8
+            total_imposto9 = valor_icms9 + valor_ie9
+            total_imposto10 = valor_icms10 + valor_ie10
+            total_imposto11 = valor_icms11 + valor_ie11
+
+            dataset_total_imposto = [total_imposto0, total_imposto1, total_imposto2, total_imposto3, total_imposto4, total_imposto5, total_imposto6, total_imposto7, total_imposto8, total_imposto9, total_imposto10, total_imposto11]
+
+            total_icms = sum(dataset_icms)
+            total_ie = sum(dataset_ie)
+            total_imposto = total_icms + total_ie 
+
+            print("Valor total do ICMS recolhido no período: ", total_icms)
+            print("Valor total do Imposto de Exportação (IE) recolhido no período: ", total_ie)
+            print("Valor total dos Impostos no período: ", total_imposto)
+
+            print("Analisando tendências")
+
+            import numpy as np 
+            
+            #Média dos valores dos impostos
+            mean_icms = np.mean(dataset_icms)
+            mean_ie = np.mean(dataset_ie)
+
+            print("Valor médio do ICMS pago no período: ", mean_icms)
+            print("Tendência")
+            if valor_icms11 > mean_icms: 
+              print("Tendência de queda nos valores do ICMS.")
+            else: 
+              print("Tendência de alta nos valores do ICMS.")
+
+            print("Valor médio do Imposto de Exportação no período: ", mean_ie)
+            print("Tendência")
+            if valor_ie11 > mean_ie: 
+              print("Tendência de queda nos valores do Imposto de Exportação (IE).")
+            else: 
+              print("Tendência de alta nos valores do Imposto de Exportação (IE).")
+
+            print("Tendência de Mercado")
+            if mean_icms > mean_ie: 
+              print("Valores de vendas maiores no mercado doméstico")
+            else: 
+              print("Valores de vendas maiores no mercado internacional")
+
+            #Máximo e mínimo valor dos impostos
+            std_icms = np.std(dataset_icms)
+            std_ie = np.std(dataset_ie)
+
+            max_icms = mean_icms + 3* std_icms 
+            min_icms = mean_icms - 3*std_icms 
+
+            print("Máximo valor de pagamento de ICMS no período: ", max_icms)
+            print("Mínimo valor de pagamento de ICMS no período: ", min_icms)
+
+            max_ie = mean_ie + 3* std_ie 
+            min_ie = mean_ie - 3* std_ie 
+
+            print("Máximo valor de pagamento de Imposto de Exportação (IE) no período: ", max_ie)
+            print("Mínimo valor de pagamento de Imposto de Exportação (IE) no período: ", min_ie)
+
+
+            #Gráfico comparativo entre o ICMS eo IE 
+            import matplotlib.pyplot as plt 
+            plt.plot(dataset_icms, label = 'Valores ICMS')
+            plt.plot(dataset_ie, label = 'Valores IE')
+            
+            #Adicionar rótulos e títulos ao gráfico. 
+            plt.xlabel("Índice")
+            plt.ylabel("Valores")
+            plt.title("Relação ICMS x IE")
+
+            #Adicionar uma legenda.
+            plt.legend()
+
+            #Exibir o gráfico 
+            plt.show() 
+
+
+
+
+
+
+
+
+
+          elif provisao == 3: 
+            print("Provisão de Perdas")
+            print("Produção")
+            sacas = int(input("Entre com o total de sacas produzidas no período: "))
+            perda_percent = float(input("Entre com o percentual de perda aceitável: "))
+            margem = float(input("Entre com a margem de lucro: "))
+            perda_sacas = sacas * perda_percent 
+            print("Total de unidades de produção perdidas: ", perda_sacas)
+
+
+            price_dataset = [298.40,295.90,291.55,263.95,236.75,263.25, 232.30,195.10,240.60,235.45,248.90,247.75]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            
+
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0] * (margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1] * (margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2] * (margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3] * (margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4] * (margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5] * (margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6] * (margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7] * (margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8] * (margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9] * (margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10] * (margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11] * (margem/100)))*sacas
+
+            receita_brl = [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+
+            #Perda de Receita.
+            perda_receita0 = perda_percent * receita_brl[0]
+            perda_receita1 = perda_percent * receita_brl[1]
+            perda_receita2 = perda_percent * receita_brl[2]
+            perda_receita3 = perda_percent * receita_brl[3]
+            perda_receita4 = perda_percent * receita_brl[4]
+            perda_receita5 = perda_percent * receita_brl[5]
+            perda_receita6 = perda_percent * receita_brl[6]
+            perda_receita7 = perda_percent * receita_brl[7]
+            perda_receita8 = perda_percent * receita_brl[8]
+            perda_receita9 = perda_percent * receita_brl[9]
+            perda_receita10 = perda_percent * receita_brl[10]
+            perda_receita11 = perda_percent * receita_brl[11]
+
+            perda_receita = [perda_receita0, perda_receita1, perda_receita2, perda_receita3,perda_receita4,perda_receita5,perda_receita6, perda_receita7, perda_receita8, perda_receita9, perda_receita10, perda_receita11]
+
+            import pandas as pd 
+            myvar = pd.Series(perda_receita, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+
+            print(myvar)
+
+            #Perda de Receita média, máxima e mínima
+            import numpy as np 
+            mean_perda = np.mean(perda_receita)
+            std_perda = np.std(perda_receita)
+
+            max_perda = mean_perda + 3* std_perda
+            min_perda = mean_perda - 3* std_perda 
+
+            print("Perda média de Receita no período: ", mean_perda)
+            print("Tendência")
+            if perda_receita[11] > mean_perda: 
+              print("Tendência de redução de perdas no periodo")
+            else: 
+              print("Tendência de aumento de perdas no periodo")
+            
+            print("Perda máxima permitida no período: ", max_perda)
+            print("Perda mínima permitida no período: ", min_perda)
+
+            print("Evolução Gráfica das Perdas")
+
+            import matplotlib.pyplot as plt
+            plt.plot(perda_receita)
+            plt.xlabel("Período")
+            plt.ylabel("Valores")
+            plt.title("Evolução Gráfica das Perdas")
+
+            plt.show()
+
+
+
+ 
+          
+            
+
+          elif provisao == 4: 
+            print("Provisão de Lucros")
+            sacas = int(input("Entre com o total de sacas produzidas: "))
+            margem = float(input("Entre com a margem de lucro do produto: "))
+            aliquota_icms = float(input("Defina a aliquota do ICMS: "))
+            aliquota_export = float(input("Defina a aliquota do Imposto de Exportação (IE): "))
+            perda_percent = float(input("Defina o percentual de perda aceitável: "))
+
+
+            price_dataset = [298.40,295.90,291.55,263.95,236.75,263.25, 232.30,195.10,240.60,235.45,248.90,247.75]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            #Receitas valores em Reais. 
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0] * (margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1] * (margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2] * (margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3] * (margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4] * (margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5] * (margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6] * (margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7] * (margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8] * (margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9] * (margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10] * (margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11] * (margem/100)))*sacas
+
+            receita_brl = [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+
+            #Custos valores em Reais
+            print("Custos")
+            print("Determine o total dos custos nos ultimos 12 meses")
+            print("Custos em Reais")
+            c0 = float(input("Entre com o total de custos no mês 1: "))
+            c1 = float(input("Entre com o total de custos no mês 2: "))
+            c2 = float(input("Entre com o total de custos no mês 3: "))
+            c3 = float(input("Entre com o total de custos no mês 4: "))
+            c4 = float(input("Entre com o total de custos no mês 5: "))
+            c5 = float(input("Entre com o total de custos no mês 6: "))
+            c6 = float(input("Entre com o total de custos no mês 7: "))
+            c7 = float(input("Entre com o total de custos no mês 8: "))
+            c8 = float(input("Entre com o total de custos no mês 9: "))
+            c9 = float(input("Entre com o total de custos no mês 10: "))
+            c10 = float(input("Entre com o total de custos no mês 11: "))
+            c11 = float(input("Entre com o total de custos no mês 12: "))
+
+            custos = [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11]
+
+            #Cálculo dos impostos. 
+            valor_icms0 = (aliquota_icms/100)*receita_brl0 
+            valor_icms1 = (aliquota_icms/100)*receita_brl1
+            valor_icms2 = (aliquota_icms/100)*receita_brl2
+            valor_icms3 = (aliquota_icms/100)*receita_brl3
+            valor_icms4 = (aliquota_icms/100)*receita_brl4
+            valor_icms5 = (aliquota_icms/100)*receita_brl5
+            valor_icms6 = (aliquota_icms/100)*receita_brl6
+            valor_icms7 = (aliquota_icms/100)*receita_brl7
+            valor_icms8 = (aliquota_icms/100)*receita_brl8
+            valor_icms9 = (aliquota_icms/100)*receita_brl9
+            valor_icms10 = (aliquota_icms/100)*receita_brl10
+            valor_icms11 = (aliquota_icms/100)*receita_brl11
+
+            dataset_icms = [valor_icms0, valor_icms1, valor_icms2, valor_icms3, valor_icms4, valor_icms5, valor_icms6, valor_icms7, valor_icms8, valor_icms9, valor_icms10, valor_icms11]
+
+
+            valor_ie0 = (aliquota_export/100)*receita_brl0
+            valor_ie1 = (aliquota_export/100)*receita_brl1
+            valor_ie2 = (aliquota_export/100)*receita_brl2
+            valor_ie3 = (aliquota_export/100)*receita_brl3
+            valor_ie4 = (aliquota_export/100)*receita_brl4
+            valor_ie5 = (aliquota_export/100)*receita_brl5
+            valor_ie6 = (aliquota_export/100)*receita_brl6
+            valor_ie7 = (aliquota_export/100)*receita_brl7
+            valor_ie8 = (aliquota_export/100)*receita_brl8
+            valor_ie9 = (aliquota_export/100)*receita_brl9
+            valor_ie10 = (aliquota_export/100)*receita_brl10
+            valor_ie11 = (aliquota_export/100)*receita_brl11
+
+            dataset_ie = [valor_ie0, valor_ie1, valor_ie2, valor_ie3, valor_ie4, valor_ie5, valor_ie6, valor_ie7, valor_ie8, valor_ie9, valor_ie10, valor_ie11]
+
+            total_imposto0 = valor_icms0 + valor_ie0
+            total_imposto1 = valor_icms1 + valor_ie1
+            total_imposto2 = valor_icms2 + valor_ie2
+            total_imposto3 = valor_icms3 + valor_ie3
+            total_imposto4 = valor_icms4 + valor_ie4
+            total_imposto5 = valor_icms5 + valor_ie5
+            total_imposto6 = valor_icms6 + valor_ie6
+            total_imposto7 = valor_icms7 + valor_ie7
+            total_imposto8 = valor_icms8 + valor_ie8
+            total_imposto9 = valor_icms9 + valor_ie9
+            total_imposto10 = valor_icms10 + valor_ie10
+            total_imposto11 = valor_icms11 + valor_ie11
+
+            dataset_total_imposto = [total_imposto0, total_imposto1, total_imposto2, total_imposto3, total_imposto4, total_imposto5, total_imposto6, total_imposto7, total_imposto8, total_imposto9, total_imposto10, total_imposto11]
+
+            perda_receita0 = (perda_percent/100) * receita_brl[0]
+            perda_receita1 = (perda_percent/100) * receita_brl[1]
+            perda_receita2 = (perda_percent/100) * receita_brl[2]
+            perda_receita3 = (perda_percent/100) * receita_brl[3]
+            perda_receita4 = (perda_percent/100) * receita_brl[4]
+            perda_receita5 = (perda_percent/100) * receita_brl[5]
+            perda_receita6 = (perda_percent/100) * receita_brl[6]
+            perda_receita7 = (perda_percent/100) * receita_brl[7]
+            perda_receita8 = (perda_percent/100) * receita_brl[8]
+            perda_receita9 = (perda_percent/100) * receita_brl[9]
+            perda_receita10 = (perda_percent/100) * receita_brl[10]
+            perda_receita11 = (perda_percent/100) * receita_brl[11]
+
+            perda_receita = [perda_receita0, perda_receita1, perda_receita2, perda_receita3,perda_receita4,perda_receita5,perda_receita6, perda_receita7, perda_receita8, perda_receita9, perda_receita10, perda_receita11]
+
+            #Lucro em Reais
+            lucro0 = receita_brl0 - custos[0] - total_imposto0 - perda_receita0
+            lucro1 = receita_brl1 - custos[1] - total_imposto1 - perda_receita1
+            lucro2 = receita_brl2 - custos[2] - total_imposto2 - perda_receita2
+            lucro3 = receita_brl3 - custos[3] - total_imposto3 - perda_receita3
+            lucro4 = receita_brl4 - custos[4] - total_imposto4 - perda_receita4
+            lucro5 = receita_brl5 - custos[5] - total_imposto5 - perda_receita5
+            lucro6 = receita_brl6 - custos[6] - total_imposto6 - perda_receita6
+            lucro7 = receita_brl7 - custos[7] - total_imposto7 - perda_receita7
+            lucro8 = receita_brl8 - custos[8] - total_imposto8 - perda_receita8
+            lucro9 = receita_brl9 - custos[9] - total_imposto9 - perda_receita9
+            lucro10 = receita_brl10 - custos[10] - total_imposto10 - perda_receita10
+            lucro11 = receita_brl11 - custos[11] - total_imposto11 - perda_receita11
+
+            lucros = [lucro0, lucro1, lucro2, lucro3, lucro4, lucro5, lucro6, lucro7, lucro8, lucro9, lucro10, lucro11]
+
+            #Métricas para lucros 
+            import numpy as np 
+            mean_lucro = np.mean(lucros)
+            print("Lucro médio do período: ", mean_lucro)
+            print("Tendência")
+            if lucros[11] > mean_lucro:
+              print("Tendência de aumento dos lucros")
+            else: 
+              print("Tendência de queda dos lucros")
+            
+            std_lucro = np.std(lucros)
+
+            max_lucros = mean_lucro + 3* std_lucro
+            min_lucros = mean_lucro - 3* std_lucro
+
+            print("Lucro máximo alcançável no período: ", max_lucros)
+            print("Lucro mínimo permitido no período: ", min_lucros)
+
+            
+            #DataFrame dos Lucros
+            atividade = {
+                "Receita": [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11],
+                "Custos": [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11],
+                "Imposto_Total": [total_imposto0, total_imposto1, total_imposto2, total_imposto3, total_imposto4, total_imposto5, total_imposto6, total_imposto7, total_imposto8, total_imposto9, total_imposto10, total_imposto11], 
+                "Perdas": [perda_receita0, perda_receita1, perda_receita2, perda_receita3,perda_receita4,perda_receita5,perda_receita6, perda_receita7, perda_receita8, perda_receita9, perda_receita10, perda_receita11], 
+                "Lucros": [lucro0, lucro1, lucro2, lucro3, lucro4, lucro5, lucro6, lucro7, lucro8, lucro9, lucro10, lucro11]
+            }
+
+            df = pd.DataFrame(atividade, index = ["jan/23", "fev/23", "mar/23", "abr/23", "mai/23", "jun/23", "jul/23", "ago/23", "set/23", "out/23", "nov/23", "dez/23"])
+            print(df)
+
+
+            #Evolução Gráfica dos Lucros 
+            import matplotlib.pyplot as plt 
+            plt.plot(lucros)
+            plt.title("Evolução Gráfica dos Lucros")
+            plt.xlabel("Período")
+            plt.ylabel("Valores")
+            plt.show()
+
+
+            
+
+
+
+          elif provisao == 5: 
+            print("Retorno dos Investimentos")
+            #VPL, Payback, Break Even Point
+
+            print("Fluxo de Caixa")
+            selic = float(input("Entre a taxa SELIC do período: "))
+            invest = float(input("Entre com o total de investimento no projeto: "))
+            sacas = int(input("Entre com o total de sacas produzidas no período: "))
+            margem = float(input("Entre com a margem de lucro do período: "))
+
+
+            print("Fluxo de Caixa em 12 meses")
+            price_dataset = [298.40,295.90,291.55,263.95,236.75,263.25, 232.30,195.10,240.60,235.45,248.90,247.75]
+            dolar = [5.07,5.24,5.06,4.99,5.05,4.79,4.72, 4.95, 5.03, 5.03, 4.93, 4.85]
+
+            receita_brl0 = ((price_dataset[0]*dolar[0]) + (price_dataset[0]*dolar[0] * (margem/100)))*sacas
+            receita_brl1 = ((price_dataset[1]*dolar[1]) + (price_dataset[1]*dolar[1] * (margem/100)))*sacas
+            receita_brl2 = ((price_dataset[2]*dolar[2]) + (price_dataset[2]*dolar[2] * (margem/100)))*sacas
+            receita_brl3 = ((price_dataset[3]*dolar[3]) + (price_dataset[3]*dolar[3] * (margem/100)))*sacas
+            receita_brl4 = ((price_dataset[4]*dolar[4]) + (price_dataset[4]*dolar[4] * (margem/100)))*sacas
+            receita_brl5 = ((price_dataset[5]*dolar[5]) + (price_dataset[5]*dolar[5] * (margem/100)))*sacas
+            receita_brl6 = ((price_dataset[6]*dolar[6]) + (price_dataset[6]*dolar[6] * (margem/100)))*sacas
+            receita_brl7 = ((price_dataset[7]*dolar[7]) + (price_dataset[7]*dolar[7] * (margem/100)))*sacas
+            receita_brl8 = ((price_dataset[8]*dolar[8]) + (price_dataset[8]*dolar[8] * (margem/100)))*sacas
+            receita_brl9 = ((price_dataset[9]*dolar[9]) + (price_dataset[9]*dolar[9] * (margem/100)))*sacas
+            receita_brl10 = ((price_dataset[10]*dolar[10]) + (price_dataset[10]*dolar[10] * (margem/100)))*sacas
+            receita_brl11 = ((price_dataset[11]*dolar[11]) + (price_dataset[11]*dolar[11] * (margem/100)))*sacas
+
+            fluxo_de_caixa = [(invest*-1), receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+            receita_brl = [receita_brl0, receita_brl1, receita_brl2, receita_brl3, receita_brl4, receita_brl5, receita_brl6, receita_brl7, receita_brl8, receita_brl9, receita_brl10, receita_brl11]
+
+            print("Custos")
+            print("Determine o total dos custos nos ultimos 12 meses")
+            print("Custos em Reais")
+            c0 = float(input("Entre com o total de custos no mês 1: "))
+            c1 = float(input("Entre com o total de custos no mês 2: "))
+            c2 = float(input("Entre com o total de custos no mês 3: "))
+            c3 = float(input("Entre com o total de custos no mês 4: "))
+            c4 = float(input("Entre com o total de custos no mês 5: "))
+            c5 = float(input("Entre com o total de custos no mês 6: "))
+            c6 = float(input("Entre com o total de custos no mês 7: "))
+            c7 = float(input("Entre com o total de custos no mês 8: "))
+            c8 = float(input("Entre com o total de custos no mês 9: "))
+            c9 = float(input("Entre com o total de custos no mês 10: "))
+            c10 = float(input("Entre com o total de custos no mês 11: "))
+            c11 = float(input("Entre com o total de custos no mês 12: "))
+
+            custos = [c0,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11]
+
+
+           
+
+
+            print("Valor Presente Líquido (VPL)")
+            vpl = sum(fluxo_de_caixa)/((1+(selic/100))**12)  #A constante 12 é referente ao período de 12 meses. 
+            print("O Valor Presente Líquido do Investimento (VPL) é: ", vpl)
+            if vpl > 0: 
+              print("O Investimento é viável.")
+            else: 
+              print("O Investimento é inviável.")
+
+            print("Payback (meses)")
+            payback = (invest*-1)/sum(receita_brl)
+            print("O Payback do projeto é: ", payback)
+
+            print("Ponto de Equilíbrio em sacas")
+            #BEP = Break Even Point. 
+
+            BEP = sum(custos)/(margem/100)
+            print("Total de sacas necessárias para alcancar o Ponto de Equilíbrio: ", BEP)
+
+
+
+
+       
+
+      elif function == 5: 
+        print("Suporte")
+        print("Em caso de dúvidas, sugestões ou reclamações entre em contato com nosso suporte.")
+        print("WhatsApp: ")
+        print("https://web.whatsapp.com")
+        print("e-mail: ")
+        print("https://www.microsoft.com/en/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fowa%2f0%2f%3fstate%3d1%26redirectTo%3daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwvMC8&sdf=0")
+
+
+        
+    else: 
+      print("Encerrar algoritmo")
+      print("Obrigado pela sua utilização.")
+
+    
+    
+
+
+    
+    break
+  # Se a entrada for diferente da senha
+  else:
+    # Reduzir o número de tentativas
+    tentativas -= 1
+    # Se ainda houver tentativas
+    if tentativas > 0:
+      # Informar ao usuário que ele errou e quantas tentativas restam
+      print(f"Você errou a senha. Você tem {tentativas} tentativa(s) restante(s).")
+    # Se não houver mais tentativas
+    else:
+      # Informar ao usuário que ele perdeu e qual era a senha correta
+      print(f"Número de tentativas excedidas. Acesso negado.")
+
+print("Developed by:\nKontreiraz")
+
+
+    
