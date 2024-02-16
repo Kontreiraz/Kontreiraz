@@ -1,0 +1,137 @@
+#Título: Algoritmo Previsão de Demanda com Machine Learning. 
+#Data: 15/02/2024 ás 16:24h. 
+#Autor: Kontreiraz. 
+#Descrição: Algoritmo Machine Learning para a previsão de demanda em um pequeno supermencado. 
+
+print("Algoritmo ML Demanda")
+print("Versão Beta")
+
+#Data e hoa no horário de Brasília. 
+import datetime
+import pytz
+
+# Obter a data e hora atual no fuso horário UTC
+data_hora_utc = datetime.datetime.now(pytz.utc)
+
+# Converter a data e hora para o fuso horário de Brasília
+fuso_horario_brasilia = pytz.timezone('America/Sao_Paulo')
+data_hora_brasilia = data_hora_utc.astimezone(fuso_horario_brasilia)
+
+# Formatar a data e hora no formato desejado
+data_formatada = data_hora_brasilia.strftime('%d/%m/%Y')
+hora_formatada = data_hora_brasilia.strftime('%H:%M:%S')
+
+# Imprimir a data e hora formatadas
+print("Data: ", data_formatada)
+print("Hora:", hora_formatada)
+
+
+#Senha do Algoritmo. 
+senha_correta = "gatinho123"
+tentativas = 3
+
+while tentativas > 0:
+    senha = input("Digite a senha: ")
+
+    if senha == senha_correta:
+        print("Senha correta! Acesso concedido.")
+        print("Previsão de demanda")
+
+        import numpy as np 
+
+        periodo_ = [1,2,3,4,5,6,7,8,9,10,11,12]
+        demanda = [105, 124, 139, 151, 103, 119, 127, 130, 116, 145, 156, 108]
+
+        import pandas as pd 
+        periodo = [i+1 for i in range(12)]
+        demanda = [105, 124, 139, 151, 103, 119, 127, 130, 116, 145, 156, 108]
+        meses = ['Jan/23', 'Fev/23', 'Mar/23', 'Abr/23', 'Mai/23', 'Jun/23', 'Jul/23', 'Ago/23', 'Set/23', 'Out/23', 'Nov/23', 'Dez/23']
+
+        dataframe = pd.DataFrame({'Período': periodo, 'Demanda': demanda}, index=meses)
+
+        print(dataframe)
+
+        print("Regressão Linear")
+        import matplotlib.pyplot as plt 
+        from scipy import stats 
+
+        slope, intercept, r, p, std_err = stats.linregress(periodo_, demanda)
+
+        def myfunc(x): 
+          return slope * x + intercept 
+        mymodel = list(map(myfunc, periodo_))
+        plt.scatter(periodo_, demanda)
+        plt.plot(periodo_, mymodel)
+        plt.title("Regressão Linear")
+        plt.show()
+
+
+        print("Coeficiente de Correlação: ", r)
+        #Valores em r: 
+        # -1 sem correlação, +1 correlacionado, 0 - neutro. 
+
+        demand_ = myfunc(6)
+        print("Previsão de demanda para os próximos 6 meses: ", demand_) #Valor de previsão de demanda. 
+
+        #Medidas descritivas
+        demanda_media = np.mean(demanda) 
+        print("Demanda média em 6 meses: ", demanda_media)
+        demanda_max = max(demanda)
+        print("Demanda máxima em 6 meses: ", demanda_max)
+        demanda_min = min(demanda)
+        print("Demanda mínima em 6 meses: ", demanda_min)
+        demanda_std =  np.std(demanda)
+        print("Desvio Padrão da Demanda: ", demanda_std)
+
+
+        #Percentis
+        print("Percentis") 
+        p0 = np.percentile(demanda, 25)
+        print("Valor de 25% da amostra: ", p0) 
+        p1 = np.percentile(demanda, 50)
+        print("Valor de 50% da amostra: ", p1)
+        p2 = np.percentile(demanda, 75)
+        print("Valor de 75% da amostra: ", p2)
+        p3 = np.percentile(demanda, 100)
+        print("Valor de 100% da amostra: ", p3)
+
+       
+
+        #Padronização - Standardization
+
+        z = (sum(demanda) - demanda_media)/demanda_std
+
+        print("Padronização: ", z)
+
+        #Treinando o modelo. 
+        #Método 80% de treino e 20% de teste. 
+
+        from sklearn.model_selection import train_test_split
+        from sklearn.linear_model import LinearRegression
+
+        x = dataframe['Período'].values.reshape(-1,1)
+        y = dataframe['Demanda'].values 
+
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 42)
+
+        model = LinearRegression ()
+        model.fit(x_train, y_train)
+
+
+        y_pred = model.predict(x_test)
+
+        for i in range (len(y_pred)):
+          print("Demanda real:", y_test[i], "Previsão de demanda:", y_pred[i])
+        
+        accuracy = model.score(x_test, y_test)
+        print("Acurácia do modelo", accuracy)
+        
+
+        break
+    else:
+        tentativas -= 1
+        print("Senha incorreta! Você tem mais", tentativas, "tentativas restantes.")
+
+    if tentativas == 0:
+        print("Você excedeu o número máximo de tentativas. Acesso negado.")
+
